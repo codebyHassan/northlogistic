@@ -1,0 +1,65 @@
+/* About page styles */
+body { font-family: 'Inter', sans-serif; }
+
+.about-hero { position: relative; width: 100%; overflow: hidden; margin-top: 140px; }
+.about-hero img { width: 100%; height: 65vh; max-height: 680px; object-fit: cover; display: block; }
+/* No overlay or color wash */
+.about-hero::after { content: none; }
+/* Hide hero text per request */
+.about-hero-content { display: none; }
+
+.about-section { padding: 80px 0; background: #f9fafb; }
+.about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
+.about-text h2 { font-size:2rem; margin:10px 0 10px; }
+.about-text p { color: #5b6b80; }
+.about-bullets { margin: 18px 0 26px; padding-left: 18px; color: #0f2740; }
+.about-bullets li { margin: 6px 0; }
+
+/* Image stack like the screenshot */
+.about-media { position: relative; }
+.about-stack { position: relative; width: 100%; max-width: 560px; margin: 0 auto; }
+.about-stack .stack-main { width: 100%; height: 380px; object-fit: cover; border-radius: 14px; border: 1px solid #e8eef5; box-shadow: 0 12px 28px rgba(13,38,76,.08); }
+.about-stack .stack-secondary { position: absolute; left: -6%; bottom: -8%; width: 70%; height: 220px; object-fit: cover; border-radius: 14px; border: 1px solid #e8eef5; box-shadow: 0 12px 28px rgba(13,38,76,.08); }
+.about-stack .exp-badge { position: absolute; left: -10%; top: 14%; background: #0b3760; color: #fff; width: 140px; height: 140px; border-radius: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px; box-shadow: 0 10px 24px rgba(13,38,76,.18); }
+.about-stack .exp-badge span { font-size: 34px; font-weight: 800; }
+.about-stack .exp-badge small { font-size: 12px; opacity: .9; }
+
+.features-section { padding: 80px 0; background: #fff; }
+.features-header { text-align: center; max-width: 760px; margin: 0 auto 24px; }
+.features-header h2 { font-size: 2.2rem; color: #0f2740; font-weight: 800; }
+.features-header p { color: #5b6b80; }
+.features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.feature-card { background: #ffffff; border: 1px solid #e8eef5; border-radius: 12px; padding: 22px; box-shadow: 0 12px 28px rgba(13,38,76,.08); }
+.feature-icon { font-size: 26px; margin-bottom: 10px; }
+/* Ensure SVG feature icons render at a consistent size */
+.feature-icon .icon, .feature-icon svg { width: 26px; height: 26px; display: inline-block; vertical-align: middle; }
+.contact-icon .icon, .contact-icon svg { width: 16px; height: 16px; }
+.footer-contact-item .icon svg { width: 18px; height: 18px; }
+.feature-card h3 { color: #0f2740; font-weight: 800; margin-bottom: 8px; }
+.feature-card p { color: #5b6b80; }
+
+/* Reveal animation (simple fade/slide) */
+.reveal { opacity: 0; transform: translateY(16px); transition: all .6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* About text refined to match screenshot */
+.overline-chip { display:inline-block; background:#f3f7ff; color:#0b3760; font-weight:700; font-size:12px; padding:6px 10px; border-radius:6px; letter-spacing:.4px; text-transform:none; }
+.about-text h2 { font-size:2rem; margin:10px 0 10px; }
+.about-divider { border:0; border-top:1px solid #e8eef5; margin:16px 0; }
+.about-checks { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px 20px; margin-bottom:18px; }
+.check-item { display:flex; align-items:center; gap:10px; color:#0f2740; font-weight:600; }
+.check-item .icon { color:#f97316; font-weight:900; }
+@media (max-width:768px){ .about-checks { grid-template-columns:1fr; } }
+
+@media (max-width: 992px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .about-hero { margin-top: 120px; }
+}
+@media (max-width: 768px) {
+  .about-hero img { height: 44vh; }
+  .about-hero { margin-top: 96px; }
+  .features-grid { grid-template-columns: 1fr; }
+  .about-stack .stack-main { height: 320px; }
+  .about-stack .stack-secondary { position: absolute; left: -4%; bottom: -10%; width: 76%; height: 200px; }
+  .about-stack .exp-badge { width: 110px; height: 110px; left: -6%; top: 18%; }
+} 

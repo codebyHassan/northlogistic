@@ -1,0 +1,21 @@
+/* Payment page */
+.pay-hero { position: relative; width: 100%; overflow: hidden; margin-top: 140px; }
+.pay-hero img { width: 100%; height: 65vh; max-height: 680px; object-fit: cover; display: block; }
+
+.pay-section { padding: 80px 0; background: #fff; }
+.pay-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 40px; align-items: center; }
+.pay-grid.reverse { grid-template-columns: 1fr 1.05fr; }
+.pay-grid.reverse .pay-text { order: 2; }
+.pay-grid.reverse .pay-media { order: 1; }
+
+.pay-text h2 { font-size: 2.2rem; color: #0f2740; font-weight: 800; margin: 8px 0 12px; }
+.pay-text h3 { font-size: 1.6rem; color: #0f2740; font-weight: 800; margin: 14px 0 10px; }
+.pay-text p { color: #5b6b80; }
+.pay-list { padding-left: 18px; color: #0f2740; }
+.pay-list li { margin: 6px 0; }
+.callout { font-weight: 800; color: #0f2740; margin: 8px 0; }
+.muted { color: #6b7280; }
+.pay-media img { width: 100%; height: 420px; object-fit: cover; border-radius: 12px; border: 1px solid #e8eef5; box-shadow: 0 12px 28px rgba(13,38,76,.08); }
+
+@media (max-width: 992px) { .pay-grid, .pay-grid.reverse { grid-template-columns: 1fr; } .pay-grid.reverse .pay-text { order: 1; } .pay-grid.reverse .pay-media { order: 2; } .pay-hero { margin-top: 120px; } }
+@media (max-width: 768px) { .pay-hero img { height: 44vh; } .pay-hero { margin-top: 96px; } .pay-media img { height: 320px; } } 
