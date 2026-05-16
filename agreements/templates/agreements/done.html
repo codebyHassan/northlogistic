@@ -1,0 +1,162 @@
+{% extends "agreements/base.html" %}
+{% block title %}Done{% endblock %}
+{% block content %}
+
+<div class="stepper-wrapper">
+  <div class="stepper-item active"><div class="step-counter">1</div><small>Carrier Info</small></div>
+  <div class="stepper-item active"><div class="step-counter">2</div><small>Conditions</small></div>
+  <div class="stepper-item active"><div class="step-counter">3</div><small>Sign Agreement</small></div>
+  <div class="stepper-item active"><div class="step-counter">4</div><small>Preview</small></div>
+  <div class="stepper-item active"><div class="step-counter">5</div><small>Done</small></div>
+</div>
+
+<div class="agreement-card text-center" style="animation: fadeUp 0.9s ease-out;">
+  <h3 class="fw-bold mb-3 text-gradient"> <h3>✅  Agreement Submitted Successfully</h3>
+
+  {% if obj %}
+    <p class="mb-3">
+      Your agreement for <strong>{{ obj.carrier_name }}</strong> has been successfully recorded and stored in the system.
+    </p>
+    <p>
+      <strong>Signed by:</strong> {{ obj.signer_full_name }}<br>
+      <strong>Date:</strong> {{ obj.created_at|date:"Y-m-d H:i" }}
+    </p>
+
+    <!-- Download Button -->
+    <div class="mt-4" style="animation: slideIn 1s ease;">
+      <a href="{% url 'agreements:agreement_pdf' obj.id %}" class="btn btn-gradient shadow">
+        <i class="fas fa-file-download me-2"></i> Download Full Agreement (PDF)
+      </a>
+    </div>
+  {% else %}
+    <p class="text-muted">Agreement workflow completed.</p>
+  {% endif %}
+
+  <a href="{% url 'agreements:home' %}" class="btn btn-primary mt-4">Go Back to Home Page </a>
+</div>
+
+<style>
+  /* Stepper */
+  .stepper-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    counter-reset: step;
+  }
+  .stepper-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+  }
+  .stepper-item::before, .stepper-item::after {
+    content: '';
+    position: absolute;
+    top: 18px;
+    height: 3px;
+    background-color: #d3d3d3;
+    width: 100%;
+    z-index: 1;
+  }
+  .stepper-item::before { right: 50%; }
+  .stepper-item::after { left: 50%; }
+  .stepper-item:first-child::before { display: none; }
+  .stepper-item:last-child::after { display: none; }
+  .stepper-item.active::before, .stepper-item.active::after {
+    background: linear-gradient(90deg, #2c3e50, #4ca1af);
+  }
+
+  .step-counter {
+    position: relative;
+    z-index: 2;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #2c3e50, #4ca1af);
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    animation: glowPulse 2s infinite ease-in-out;
+  }
+
+  @keyframes glowPulse {
+    0% { box-shadow: 0 0 6px rgba(76,161,175,0.5), 0 0 12px rgba(44,62,80,0.4); }
+    50% { box-shadow: 0 0 20px rgba(76,161,175,0.8), 0 0 40px rgba(44,62,80,0.6); }
+    100% { box-shadow: 0 0 6px rgba(76,161,175,0.5), 0 0 12px rgba(44,62,80,0.4); }
+  }
+
+  /* Agreement Card */
+  .agreement-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    max-width: 700px;
+    margin: 50px auto;
+  }
+
+  .text-gradient {
+    background: linear-gradient(90deg, #2c3e50, #4ca1af);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Buttons */
+  .btn-gradient {
+    background: linear-gradient(90deg, #2c3e50, #4ca1af);
+    color: white;
+    border: none;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 12px rgba(44,62,80,0.4);
+  }
+  .btn-gradient:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 18px rgba(76,161,175,0.6);
+  }
+
+  .btn-primary {
+    background: linear-gradient(90deg, #2c3e50, #4ca1af);
+    border: none;
+    transition: all 0.3s ease;
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(44, 62, 80, 0.3);
+  }
+
+  /* Animations */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+   /* === THEME COLOR: #114476 (Gradient with #165b99) === */
+  .btn-primary {
+    background: linear-gradient(90deg, #114476, #165b99);
+    border: none;
+  }
+  .btn-primary:hover {
+    background: linear-gradient(90deg, #0e3c68, #114476);
+  }
+
+  .stepper-item.active .step-counter {
+    background: linear-gradient(135deg, #114476, #165b99);
+  }
+  .stepper-item.active::after {
+    background: linear-gradient(90deg, #114476, #165b99);
+  }
+
+</style>
+
+{% endblock %}

@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>About • WIDE Range Logistics LLC</title>
+  <meta name="robots" content="index,follow,noarchive" />
+  <meta name="googlebot" content="noarchive" />
+  <link rel="stylesheet" href="{% static 'frontend/css/styles.css' %}" />
+  <link rel="stylesheet" href="{% static 'frontend/css/about.css' %}" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/webp" href="{% static 'frontend/images/logo.jpg' %}" />
+  <link rel="apple-touch-icon" href="{% static 'frontend/images/logo.jpg' %}" />
+</head>
+<body>
+{% include 'frontend/header.html' %}
+
+  <!-- Hero (same height as landing page second hero) -->
+  <section class="about-hero">
+            <img src="{% static 'frontend/images/hero.png' %}" alt="About WIDE Range Logistics LLC" />
+    <div class="container about-hero-content">
+              <span class="section-badge">WIDE Range Logistics LLC</span>
+      <h1>Reliable and Secure Transportation Delivered On Time</h1>
+      <p>From freight solutions to compliance support — we help drivers and carriers move smarter, faster, and with peace of mind.</p>
+    </div>
+  </section>
+
+  <!-- About section (two columns) -->
+  <section class="about-section" id="about">
+    <div class="container about-grid">
+      <div class="about-text reveal">
+        <span class="overline-chip">WIDE Range Logistics LLC</span>
+        <h2>About Us</h2>
+        <p>
+          We specialize in reliable and efficient solutions for truckers and logistics professionals across the U.S.
+          Whether you’re just starting your journey or scaling operations, we offer tailored services including trailer rentals,
+          TWIC card assistance, commercial insurance setup, and factoring registration — designed to keep you compliant,
+          moving faster, and paid without delays.
+        </p>
+        <hr class="about-divider" />
+        <div class="about-checks">
+          <div class="check-item"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span> <span>Real‑Time Tracking</span></div>
+          <div class="check-item"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span> <span>Customizable Logistics Solutions</span></div>
+          <div class="check-item"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span> <span>On‑Time Delivery</span></div>
+          <div class="check-item"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span> <span>24/7 Customer Support</span></div>
+        </div>
+        <a class="cta-button" href="{% url 'agreements:contact' %}">Get In Touch <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></span></a>
+      </div>
+      <div class="about-media reveal">
+        <div class="about-stack">
+          <img class="stack-main" src="{% static 'frontend/images/landing%201.jpg' %}" alt="Logistics montage" />
+          <div class="exp-badge"><span>34+</span><small>Our Experience</small></div>
+          <img class="stack-secondary" src="{% static 'frontend/images/landing%20card%203.jpg' %}" alt="Port and transport" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stylish feature section -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <div class="features-header">
+        <span class="overline-badge">Why Choose Us</span>
+        <h2>Built For Drivers. Trusted By Carriers.</h2>
+        <p>Premium support and practical solutions that make your business run smoother — without the hassle.</p>
+      </div>
+      <div class="features-grid">
+        <article class="feature-card reveal">
+          <div class="feature-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
+          <h3>Same‑Day Processing</h3>
+          <p>Fast TWIC assistance, insurance application help, and factoring setup — so cash flow never slows you down.</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path></svg></div>
+          <h3>Compliance & Support</h3>
+          <p>Stay road‑ready. We guide you through paperwork and keep you compliant with round‑the‑clock assistance.</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17h4a4 4 0 1 0 4-4h-1V7h-7v10ZM4 17h2a4 4 0 1 0 4-4H4v4Z"></path><path d="M6 17H2v-4h4"></path></svg></div>
+          <h3>High‑Paying Lanes</h3>
+          <p>Access reliable, high‑demand routes from trusted shippers — with coordination handled by our dispatch team.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  {% include 'frontend/footer.html' %}
+
+  <script src="{% static 'frontend/js/script.js' %}" ></script>
+  <script src="{% static 'frontend/js/about.js' %}"></script>
+</body>
+
+<!-- Mirrored from northernstarlogisticinc.com/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Oct 2025 04:43:29 GMT -->
+</html> 

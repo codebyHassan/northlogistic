@@ -1,0 +1,260 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Broker/Carrier Agreement PDF</title>
+
+  <!-- ✍️ Signature Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #111;
+      padding: 40px;
+      background: #fff;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    /* HEADER BOX */
+    .header-box {
+      border: 2px solid #000;
+      border-radius: 8px;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    .header-box .logo-left img,
+    .header-box .logo-right img {
+      height: 120px;
+      width: auto;
+      object-fit: contain;
+      filter: grayscale(100%);
+    }
+
+    .header-box .title {
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    .header-box .title h2 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #000;
+      letter-spacing: 0.5px;
+    }
+
+    .header-box .title p {
+      margin: 2px 0 0 0;
+      font-size: 13px;
+      color: #444;
+    }
+
+    /* SECTION HEADERS */
+    h3 {
+      color: #000;
+      font-size: 16px;
+      margin-top: 25px;
+      border: 1px solid #000;
+      background-color: #f2f2f2;
+      padding: 6px 10px;
+      border-radius: 4px;
+    }
+
+    /* TABLE STYLING */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    td {
+      padding: 8px 10px;
+      border: 1px solid #555;
+      vertical-align: middle;
+      width: 50%;
+    }
+
+    td:first-child {
+      font-weight: bold;
+      background-color: #f8f8f8;
+      width: 35%;
+      color: #000;
+    }
+
+    td:last-child {
+      color: #111;
+      width: 65%;
+    }
+
+    .section {
+      border: 1px solid #555;
+      padding: 10px 12px;
+      border-radius: 4px;
+      margin-top: 10px;
+      background: #fafafa;
+    }
+
+    .section p {
+      margin: 6px 0;
+      text-align: justify;
+      color: #111;
+    }
+
+    /* Signature styles */
+    .signature img {
+      width: 200px;
+      height: auto;
+      border: 1px solid #777;
+      filter: grayscale(100%);
+      margin-top: 5px;
+    }
+
+    .signature-text {
+      font-family: 'Great Vibes', cursive;
+      font-size: 32px;
+      color: #000;
+      margin-top: 6px;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 11px;
+      text-align: center;
+      color: #555;
+      border-top: 1px solid #777;
+      padding-top: 8px;
+    }
+
+    /* PRINT OPTIMIZATION */
+    @media print {
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .header-box, h3, table, .section {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header-box">
+  <div class="logo-left">
+    <img src="static/agreements/images/widerangelogo.png" alt="Company Logo">
+  </div>
+
+  <div class="title">
+    <h2>BROKER / CARRIER AGREEMENT</h2>
+    <p><strong>Date:</strong> {{ obj.agreement_date|date:"M d, Y" }}</p>
+  </div>
+
+  <div class="logo-right">
+    {% if obj.carrier_logo %}
+      <img src="{{ obj.carrier_logo.url }}" alt="Carrier Logo">
+    {% else %}
+      <img src="sttic/agreements/images/widerangelogo.png" alt="Carrier Logo">
+    {% endif %}
+  </div>
+</div>
+
+<!-- BROKER INFO -->
+<h3>BROKER INFORMATION</h3>
+<table>
+  <tr><td>Broker Name:</td><td>WIDE RANGE LOGISTICS LLC</td></tr>
+  <tr><td>Address:</td><td>419 INTERLUDE RD NEW IBERIA, LA 70563</td></tr>
+  <tr><td>Zip:</td><td>70563</td></tr>
+  <tr><td>Phone:</td><td>(123) 456-7890</td></tr>
+  <tr><td>Email:</td><td>info@widerangelogistics.com</td></tr>
+</table>
+
+<!-- CARRIER INFO -->
+<h3>CARRIER INFORMATION</h3>
+<table>
+  <tr><td>Carrier Name:</td><td>{{ obj.carrier_name }}</td></tr>
+  <tr><td>MC / DOT #:</td><td>{{ obj.carrier_usdot_number }}</td></tr>
+  <tr><td>Phone:</td><td>{{ obj.carrier_phone }}</td></tr>
+</table>
+
+<!-- BANK INFO -->
+<h3>BANKING INFORMATION</h3>
+<table>
+  <tr><td>Bank Name:</td><td>{{ obj.bank_name }}</td></tr>
+  <tr><td>Account Number:</td><td>{{ obj.account_number }}</td></tr>
+  <tr><td>Account Type:</td><td>{{ obj.account_type }}</td></tr>
+</table>
+
+<!-- AGREEMENT DETAILS -->
+<h3>AGREEMENT DETAILS</h3>
+<div class="section">
+  <p>
+    This Agreement is made between <b>WIDE Range Logistics LLC</b> (“Broker”) and
+    <b>{{ obj.carrier_name }}</b> (“Carrier”) for the purpose of arranging transportation
+    services in accordance with the terms and conditions herein.
+  </p>
+</div>
+
+<!-- TERMS -->
+<h3>TERMS & CONDITIONS</h3>
+<div class="section">
+  <p><b>1. Broker Obligations:</b> Broker offers, and Carrier transports, shipments of property for agreed compensation.</p>
+  <p><b>2. Carrier Obligations:</b> Carrier maintains all required licenses, insurance, and safety standards.</p>
+  <p><b>3. Payment Terms:</b> Payment within {{ obj.payment_terms }} days after POD and invoice receipt.</p>
+  <p><b>4. Documentation:</b> Carrier provides delivery receipts and bills of lading after delivery.</p>
+  <p><b>5. Equipment:</b> Carrier provides clean and roadworthy equipment for all loads.</p>
+</div>
+
+<!-- STATUS -->
+<h3>INDEPENDENT CONTRACTOR STATUS</h3>
+<div class="section">
+  <p>
+    The parties are independent contractors. This Agreement does not create a partnership,
+    joint venture, or employer-employee relationship.
+  </p>
+</div>
+
+<!-- SIGNATURES -->
+<h3>SIGNATURES</h3>
+<table>
+  <tr><td>Broker Representative:</td><td>{{ obj.signer_full_name }}</td></tr>
+  <tr><td>Carrier Name:</td><td>{{ obj.carrier_name }}</td></tr>
+  <tr>
+    <td>Signature:</td>
+    <td class="signature">
+      {% if obj.signature_image %}
+        <img src="{{ obj.signature_image.url }}" alt="Signature Image">
+      {% elif obj.signature_canvas %}
+        <img src="data:image/png;base64,{{ obj.signature_canvas }}" alt="Signature Canvas">
+      {% elif obj.signature_text %}
+        <div class="signature-text">{{ obj.signature_text }}</div>
+      {% else %}
+        <em>No signature provided</em>
+      {% endif %}
+    </td>
+  </tr>
+  <tr><td>Signed Date:</td><td>{{ obj.created_at|date:"Y-m-d H:i" }}</td></tr>
+</table>
+
+<!-- CERTIFICATION -->
+<h3>CERTIFICATION</h3>
+<div class="section">
+  <p>
+    Carrier certifies that all drivers, vehicles, and operations comply with DOT and FMCSA standards.
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by Northern Star Logistics System — {{ obj.created_at|date:"Y-m-d H:i" }}</p>
+</div>
+
+</body>
+</html>

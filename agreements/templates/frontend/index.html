@@ -1,0 +1,521 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,follow,noarchive">
+    <meta name="googlebot" content="noarchive">
+    <title>WIDE Range Logistics LLC- Reliable Logistics Solutions</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{% static 'frontend//css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/webp" href="{% static 'frontend/images/logo.jpg' %}">
+    <link rel="icon" type="image/png" href="{% static 'frontend/images/image.png' %}">
+    <link rel="apple-touch-icon" href="{% static 'frontend/images/logo.jpg' %}">
+    <link rel="manifest" href="{% static 'frontend/site.webmanifest' %}">
+    <meta name="theme-color" content="#0b3760">
+</head>
+
+<body>
+  {% include "frontend/header.html" %}
+  <br><br>
+    <!-- Example of image replacement -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <img src="{% static 'frontend/images/ship-kela.jpg' %}" alt="Cargo Ship Background">
+        </div>
+        <div class="hero-floating-elements">
+            <div class="floating-element floating-person">
+                <img src="{% static 'frontend/images/banda-kela.png' %}" alt="Delivery Person">
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-badge">WIDE Range Logistics LLC</span>
+                    <h1 id="heroTitle">Secure Steady Freight with Guaranteed Lanes</h1>
+                    <p>
+                        Tired of chasing loads? Reserve your dedicated lane with WIDE Range Logistics LLC and enjoy
+                        consistent weekly routes, reliable income, and full support — plus get your reservation fee
+                        refunded after your first delivery. It's time to run smart, not hard.
+                    </p>
+                    <a class="hero-cta" href="{% url 'agreements:about' %}">
+                        Get In Touch 
+                        <span>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="M12 5l7 7-7 7"></path>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- Services Section -->
+    <section class="services" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Our Services</span>
+                <h2 id="servicesHeading" class="fade-on-view">Smart Solutions for Every Trucking</h2>
+                <p>From trailers rentals to TWIC card help, insurance, and factoring — we make it easier for truckers to
+                    get on the road, stay compliant, and get paid fast.</p>
+            </div>
+
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="service-image">
+                        <img src="{% static 'frontend/images/landing1.jpg' %}" alt="Rented Trailer Program">
+                    </div>
+                    <h3>Rented Trailer Program – $500 for 3 Months</h3>
+                    <p>Don't have a trailer? No problem. Rent one from us and stay moving. Ready trailers for rent so
+                        you can get moving immediately and start earning without the upfront cost of buying your own.
+                    </p>
+                    <a class="service-btn" href="{% url 'agreements:service1' %}">View Service <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></span></a>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-image">
+                        <img src="{% static 'frontend/images/landingcard1.png' %}" alt="TWIC Card Assistance">
+                    </div>
+                    <h3>TWIC Card Assistance – $360 Same-Day Processing</h3>
+                    <p>A TWIC card (Transportation Worker Identification Credential) is required for drivers who need to
+                        access secure ports, terminals, military bases, and government freight facilities across the
+                        U.S. Without it, you miss out on some of the highest-paying loads in the industry.</p>
+                    <a class="service-btn" href="{% url 'agreements:service2' %}">View Service <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></span></a>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-image">
+                        <img src="{% static 'frontend/images/landingcard2.png' %}" alt="Insurance Application Assistance">
+                    </div>
+                    <h3>Insurance Application Assistance – $399 Same-Day Service</h3>
+                    <p>We Help You Apply for the Right Commercial Trucking Insurance – Fast. Whether you're a new
+                        owner-operator or an experienced carrier, commercial insurance is a legal requirement and one of
+                        the first steps to start hauling loads. We help you get insured the right way — with speed,
+                        accuracy, and trusted partners.</p>
+                    <a class="service-btn" href="{% url 'agreements:service3' %}">View Service <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></span></a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dedicated Lane Section -->
+    <section class="dedicated-lane">
+        <div class="container">
+            <div class="dedicated-content">
+                <div class="dedicated-image">
+                    <img src="{% static 'frontend/images/landing1.jpg' %}" alt="Dedicated Lane Truck">
+                </div>
+                <div class="dedicated-text">
+
+                    <h2 class="fade-on-view">What Is a Dedicated Lane?</h2>
+                    <p>A dedicated lane is a pre-assigned, consistent freight route between the same pickup and delivery
+                        locations — typically running the same schedule each week. This is one of the most reliable ways
+                        for truck drivers and owner-operators to secure steady work and predictable income.</p>
+
+                    <div class="benefits-list">
+                        <h4>Benefits of a Dedicated Lane:</h4>
+                        <ul>
+                            <li>✅ Steady Weekly Miles & Freight – No scrambling for last-minute loads</li>
+                            <li>✅ Consistent Income – Know what you'll earn before hitting the road</li>
+                            <li>✅ Preferred Routes – Choose lanes based on region, home time, or freight type</li>
+                            <li>✅ No Load Board Hassle – We handle the negotiations, paperwork & dispatch</li>
+                            <li>✅ Build Long-Term Shipper Relationships – Leading to even more opportunity</li>
+                        </ul>
+                    </div>
+
+                    <a class="cta-button" href="{% url 'agreements:about' %}">Get In Touch <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="container">
+            <div class="pricing-content">
+                <div class="pricing-text">
+
+                    <h2 class="fade-on-view">Why We Charge a $399 Reservation Fee?</h2>
+                    <p>We work with a large network of trusted, high-paying shippers and offer dedicated lanes that are
+                        in high demand. Securing a lane requires coordination, contract setup, dispatch planning, and
+                        load commitment from both parties.</p>
+                    <p>The $399 reservation fee helps us:</p>
+                    <ul>
+                        <li>Confirm your interest and secure your spot with the shipper</li>
+                        <li>Begin the onboarding and dispatch coordination process</li>
+                        <li>Prevent no-shows and ensure serious drivers only</li>
+                        <li>Assign a dedicated dispatch team to your route</li>
+                    </ul>
+                    <a class="cta-button" href="{% url 'agreements:about' %}">Get In Touch <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></span></a>
+                </div>
+                <div class="pricing-image">
+                    <img src="{% static 'frontend/images/landingman.png' %}" alt="Pricing Explanation">
+                </div>
+            </div>
+
+            <div class="refund-section">
+                <div class="refund-content">
+                    <div class="refund-image">
+                        <img src="{% static 'frontend/images/landingdollar.png' %}" alt="Refundable Fee">
+                    </div>
+                    <div class="refund-text">
+
+                        <h2 class="fade-on-view">Good News: It's Fully Refundable</h2>
+                        <p>✅ Once you complete your first delivery, the $399 is refunded to you in full. That's our way
+                            of showing that we're invested in your success — and only want to work with drivers ready to
+                            roll.</p>
+
+                        <div class="refund-details">
+                            <h4>What's Included in the Reservation Fee:</h4>
+                            <ul>
+                                <li>Dedicated lane setup and route planning</li>
+                                <li>Full dispatch setup and route planning</li>
+                                <li>Access to high-paying loads from our shipper network</li>
+                                <li>Support with any required documents or onboarding steps</li>
+                                <li>Ongoing 24/7 dispatch support once you're running</li>
+                            </ul>
+
+                            <h4>Example Lane Types We Offer:</h4>
+                            <ul>
+                                <li>Regional (OTR round trip)</li>
+                                <li>Local (daily home time within 300 miles)</li>
+                                <li>Long-Haul (cross-country lanes with premium pay)</li>
+                                <li>Amazon relay lanes and government-contracted freight</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Services Section -->
+    <section class="global-services">
+        <div class="container">
+            <div class="global-title">
+                <span class="overline">Trusted by Industry Leaders</span>
+                <h2 class="fade-on-view">Global Servicing Around the World</h2>
+                <div class="title-underline"></div>
+                <p class="global-subtext">We collaborate with the best in the industry to deliver exceptional service
+                </p>
+            </div>
+
+            <div class="partners-viewport">
+                <div class="partners-track">
+                    <img src="{% static 'frontend/images/landingpartner.jpg' %}" alt="J.B. Hunt">
+                    <img src="{% static 'frontend/images/landingpartner2.jpg' %}" alt="FedEx">
+                    <img src="{% static 'frontend/images/landingpartener%203.jpg' %}" alt="ATS Logistics">
+                    <img src="{% static 'frontend/images/landingpartener4.jpg' %}" alt="SMC Transport">
+                    <img src="{% static 'frontend/images/landingpartener%205.jpg' %}" alt="Sureway">
+                    <img src="{% static 'frontend/images/landingpartener6.jpg' %}" alt="TQL">
+                    <!-- duplicate for seamless scroll -->
+                    <img src="{% static 'frontend/images/landingpartner.jpg' %}" alt="J.B. Hunt">
+                    <img src="{% static 'frontend/images/landingpartner2.jpg' %}" alt="FedEx">
+                    <img src="{% static 'frontend/images/landingpartener3.jpg' %}" alt="ATS Logistics">
+                    <img src="{% static 'frontend/images/landingpartener4.jpg' %}" alt="SMC Transport">
+                    <img src="{% static 'frontend/images/landingpartener5.jpg' %}" alt="Sureway">
+                    <img src="{% static 'frontend/images/landingpartener6.jpg' %}" alt="TQL">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Pricing Section -->
+    <section class="services-pricing">
+        <div class="container">
+            <div class="pricing-header">
+                <span class="pricing-overline">Our Services Pricing</span>
+                <h2 class="fade-on-view">Reliable Logistics. Real Results.</h2>
+                <p>
+                    At WIDE Range Logistics LLC, we simplify your journey — from dedicated lanes and trailer rentals
+                    to TWIC assistance and insurance applications. Our end-to-end support ensures your trucking business
+                    runs
+                    smoothly, efficiently, and profitably.
+                </p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Card 1 -->
+                <article class="pricing-card">
+                    <div class="pricing-image">
+                        <img src="{% static 'frontend/images/landing1.jpg' %}" alt="Dedicated Lane Truck">
+                        <span class="price-badge">$399</span>
+                    </div>
+                    <h3>Dedicated Lane Reservation — $399 (One-Time Fee)</h3>
+                    <ul class="pricing-list">
+                        <li>Reserve your spot on a dedicated lane with guaranteed freight</li>
+                        <li>100% refundable after your first completed delivery</li>
+                    </ul>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="pricing-card">
+                    <div class="pricing-image">
+                        <img src="{% static 'frontend/images/landing%20card%201.png' %}" alt="TWIC Card Assistance">
+                        <span class="price-badge">$360</span>
+                    </div>
+                    <h3>TWIC Card Assistance — $360</h3>
+                    <ul class="pricing-list">
+                        <li>Unlock access to high-paying port and restricted-access loads</li>
+                        <li>Same‑day processing with step‑by‑step guidance</li>
+                    </ul>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="pricing-card">
+                    <div class="pricing-image">
+                        <img src="{% static 'frontend/images/landing%20card%204.png' %}" alt="Rented Trailer">
+                        <span class="price-badge">$500</span>
+                    </div>
+                    <h3>Rented Trailer — $500 (3‑Month Lease)</h3>
+                    <ul class="pricing-list">
+                        <li>Dry van or reefer options</li>
+                        <li>90‑day term, fully compliant and road‑ready</li>
+                    </ul>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="pricing-card">
+                    <div class="pricing-image">
+                        <img src="{% static 'frontend/images/landing%20card%203.jpg' %}" alt="Factoring Setup">
+                        <span class="price-badge">$250</span>
+                    </div>
+                    <h3>Factoring Setup — $250</h3>
+                    <ul class="pricing-list">
+                        <li>Same‑day registration with a trusted factoring partner</li>
+                        <li>No waiting weeks for load payments — Cash flow made easy</li>
+                    </ul>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="pricing-card">
+                    <div class="pricing-image">
+                        <img src="{% static 'frontend/images/landing%20card%202.png' %}" alt="Insurance Application Assistance">
+                        <span class="price-badge">$399</span>
+                    </div>
+                    <h3>Insurance Application Assistance — $399</h3>
+                    <ul class="pricing-list">
+                        <li>We help you apply fast with preferred insurance partners</li>
+                        <li>Designed for both new and experienced carriers</li>
+                    </ul>
+                </article>
+
+                <!-- Card 6 -->
+                <article class="pricing-card">
+                    <div class="pricing-image">
+                        <img src="{% static 'frontend/images/landing%20dollar.png' %}" alt="Bundle Discounts">
+                        <span class="price-badge">Save</span>
+                    </div>
+                    <h3>Bundle Discounts Available</h3>
+                    <ul class="pricing-list">
+                        <li>Save when you combine multiple services</li>
+                        <li>We support your full setup journey</li>
+                    </ul>
+                </article>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Secondary Hero Section -->
+    <section class="secondary-hero">
+        <img src="{% static 'frontend/images/second-hero-1.png' %}" alt="Trusted Freight services overview">
+        <div class="hero-progress" aria-hidden="true">
+            <div class="progress-row">
+                <div class="progress-track"><div class="progress-fill" data-width="100"></div></div>
+                <div class="progress-meta"><span class="progress-label">Efficient Intermodal Shipping</span><span class="progress-value">100%</span></div>
+            </div>
+            
+            <div class="progress-row">
+                <div class="progress-track"><div class="progress-fill" data-width="100"></div></div>
+                <div class="progress-meta"><span class="progress-label">Secure Warehousing Solutions</span><span class="progress-value">100%</span></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Why Choose (white strip) -->
+    <section class="why-choose-strip">
+        <div class="container">
+            <div class="why-choose-panel">
+                <span class="section-badge">WHY CHOOSE WIDE Range Logistics LLC</span>
+                <h2 class="why-choose-title">Your All-in-One Wide Range Logistics Star Partner</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats (white strip) -->
+    <section class="stats-strip">
+        <div class="container">
+            <div class="stats-panel">
+                <div class="stat-item">
+                    <div class="stat-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 3H15L19 7V21C19 21.5523 18.5523 22 18 22H6C5.44772 22 5 21.5523 5 21V5C5 4.44772 5.44772 4 6 4H9Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M9 3V8C9 8.55228 9.44772 9 10 9H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 13H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M8 17H14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="stat-number" data-target="2684" data-compact="false" data-suffix="+">0</div>
+                    <div class="stat-label">Project Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 11C18.2091 11 20 9.20914 20 7C20 4.79086 18.2091 3 16 3C13.7909 3 12 4.79086 12 7C12 9.20914 13.7909 11 16 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 13C10.2091 13 12 11.2091 12 9C12 6.79086 10.2091 5 8 5C5.79086 5 4 6.79086 4 9C4 11.2091 5.79086 13 8 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 21C2.98378 18.613 5.31727 17 8 17C10.6827 17 13.0162 18.613 14 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M12.5 21C13.2782 19.1044 14.9946 18 17 18C19.0054 18 20.7218 19.1044 21.5 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="stat-number" data-target="14000" data-compact="true" data-suffix="+">0</div>
+                    <div class="stat-label">Talented Staffs</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 21H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M3 8L9 12L3 16V8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M21 8L15 12L21 16V8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M9 12H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="stat-number" data-target="2000000" data-compact="true" data-suffix="+">0</div>
+                    <div class="stat-label">Tonnes Supplied</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8L8 12L12 9L16 12L21 8V17C21 18.6569 19.6569 20 18 20H6C4.34315 20 3 18.6569 3 17V8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M8 12V6H3V8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M21 8V6H16V12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="stat-number" data-target="22000" data-compact="true" data-suffix="+">0</div>
+                    <div class="stat-label">New Partners</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="testimonials-top">
+                <div class="testimonials-intro">
+                    <span class="overline-badge">Client Testimonials</span>
+                    <h2>What Our Partners Say About WIDE Range Logistics LLC</h2>
+                    <p>Our services empower independent truckers and small carriers across the U.S. Hear how we’ve
+                        helped them hit the road faster, safer, and with confidence.</p>
+                </div>
+                <div class="testimonials-ratings">
+                    <div class="rating-item">
+                        <img class="rating-logo" src="{% static 'frontend/images/google.png' %}" alt="Google logo">
+                        <div class="rating-text">4.8 From 799+ reviews</div>
+                    </div>
+                    <div class="rating-item">
+                        <img class="rating-logo" src="{% static 'frontend/images/rating.png' %}" alt="Trustpilot">
+                        <div class="rating-text">4.9 From 200+ reviews</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonials-body">
+                <button class="nav-btn prev" id="prevBtn">‹</button>
+                <div class="testimonial-carousel" id="testimonialCarousel">
+                    <article class="testimonial-card" data-index="0">
+                        <div class="testimonial-avatar">
+                            <img src="{% static 'frontend/images/test1.jpg' %}" alt="User avatar">
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="stars">★★★★★</div>
+                            <h3>Northern Star Logistics has completely transformed the way we handle our shipments. From
+                                pickup to delivery, everything is tracked, timely, and well‑managed. We’ve been able to
+                                cut costs and reduce delays across the board.</h3>
+                            <div class="author">
+                                <strong>— Matt Henry</strong>
+                                <span>Supply Chain Manager</span>
+                            </div>
+                        </div>
+                        <div class="quote-mark">”</div>
+                    </article>
+                    <article class="testimonial-card" data-index="1">
+                        <div class="testimonial-avatar">
+                            <img src="{% static 'frontend/images/test2.jpg' %}" alt="User avatar">
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="stars">★★★★★</div>
+                            <h3>What impressed us most was the constant communication and transparency. Their
+                                dispatchers are on point, and their warehousing services are top‑tier. We trust them
+                                with high‑value cargo and they never disappoint.</h3>
+                            <div class="author">
+                                <strong>— Carlos Mendez</strong>
+                                <span>Logistics Director</span>
+                            </div>
+                        </div>
+                        <div class="quote-mark">”</div>
+                    </article>
+                    <article class="testimonial-card" data-index="2">
+                        <div class="testimonial-avatar">
+                            <img src="{% static 'frontend/images/test3.jpg' %}" alt="User avatar">
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="stars">★★★★★</div>
+                            <h3>I highly recommend this agency; they’re extremely knowledgeable regarding all our truck
+                                insurance needs! We have all our accounts with them, and we couldn’t be happier!</h3>
+                            <div class="author">
+                                <strong>— Alessandro Daluz</strong>
+                                <span>Satisfied Customer</span>
+                            </div>
+                        </div>
+                        <div class="quote-mark">”</div>
+                    </article>
+                    <article class="testimonial-card" data-index="3">
+                        <div class="testimonial-avatar">
+                            <img src="{% static 'frontend/images/test1.jpg' %}" alt="User avatar">
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="stars">★★★★★</div>
+                            <h3>Best experience I’ve had with an insurance agency. Excellent service and great
+                                after‑sales care. Highly recommended!</h3>
+                            <div class="author">
+                                <strong>— Vinny Moreira</strong>
+                                <span>Business Owner</span>
+                            </div>
+                        </div>
+                        <div class="quote-mark">”</div>
+                    </article>
+                    <article class="testimonial-card" data-index="4">
+                        <div class="testimonial-avatar">
+                            <img src="{% static 'frontend/images/test2.jpg' %}" alt="User avatar">
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="stars">★★★★★</div>
+                            <h3>Professional team and great experience — they always answer the phone and solve issues
+                                quickly. Excellent service from the team.</h3>
+                            <div class="author">
+                                <strong>— Jay Jay</strong>
+                                <span>Truck Owner</span>
+                            </div>
+                        </div>
+                        <div class="quote-mark">”</div>
+                    </article>
+                </div>
+                <button class="nav-btn next" id="nextBtn">›</button>
+            </div>
+        </div>
+    </section>
+{% include 'frontend/footer.html' %}
+    <script src="{% static 'frontend/js/script.js' %}" defer></script>
+
+</body>
+</html>

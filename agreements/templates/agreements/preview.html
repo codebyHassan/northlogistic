@@ -1,0 +1,151 @@
+{% extends "agreements/base.html" %}
+{% block title %}Preview Agreement{% endblock %}
+{% block content %}
+
+<div class="stepper-wrapper" syle='color '>
+  <div class="stepper-item active"><div class="step-counter">1</div><small>Carrier Info</small></div>
+  <div class="stepper-item active"><div class="step-counter">2</div><small>Conditions</small></div>
+  <div class="stepper-item active"><div class="step-counter">3</div><small>Sign Agreement</small></div>
+  <div class="stepper-item active"><div class="step-counter">4</div><small>Preview</small></div>
+  <div class="stepper-item"><div class="step-counter">5</div><small>Done</small></div>
+</div>
+
+<div class="agreement-card">
+  <h3 class="text-center mb-3 fw-bold">Preview Agreement</h3>
+  <p class="text-center text-muted mb-4">Please review all details below before final submission.</p>
+
+  <div class="p-3 border rounded mb-4 bg-light">
+    <h5 class="fw-bold">Broker Information</h5>
+    <p>
+      <strong>Broker:</strong> WIDE Range Logistics LLC.<br>
+      <strong>USDOT:</strong> #2248522 — <strong>MC:</strong> #741715<br>
+      <strong>Email:</strong> <a href="mailto:chris@northernstarlogisticsinc.com">chris@northernstarlogisticsinc.com</a><br>
+      <strong>Address:</strong> 419 INTERLUDE RD NEW IBERIA, LA 70563
+    </p>
+  </div>
+
+  <div class="p-3 border rounded mb-4">
+    <h5 class="fw-bold">Carrier Information</h5>
+    <p>
+      <strong>Carrier Name:</strong> {{ obj.carrier_name }}<br>
+      <strong>USDOT/MC:</strong> {{ obj.carrier_usdot_number }}<br>
+      <strong>Phone:</strong> {{ obj.carrier_phone }}<br>
+      <strong>Agreement Date:</strong> {{ obj.agreement_date }}
+    </p>
+  </div>
+
+  <div class="p-3 border rounded mb-4">
+    <h5 class="fw-bold">Banking Information</h5>
+    <p>
+      <strong>Bank Name:</strong> {{ obj.bank_name }}<br>
+      <strong>Account Number:</strong> {{ obj.account_number }}<br>
+      <strong>Account Type:</strong> {{ obj.account_type }}
+    </p>
+  </div>
+
+  <div class="p-3 border rounded mb-4">
+    <h5 class="fw-bold">Signature Details</h5>
+    <p>
+      <strong>Signer Name:</strong> {{ obj.signer_full_name }}<br>
+      <strong>Title:</strong> {{ obj.signer_title }}<br>
+      <strong>Email:</strong> {{ obj.signer_email }}<br>
+      <strong>Signature Text:</strong> {{ obj.signature_text }}<br>
+      <strong>Deposit Method:</strong> {{ obj.deposit_method }}<br>
+    </p>
+
+    {% if obj.signature_image %}
+      <div class="text-center mt-3">
+        <h6 class="fw-bold">Drawn Signature:</h6>
+        <img src="{{ obj.signature_image }}" alt="Signature" class="border rounded shadow-sm" style="width: 300px; height: auto;">
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="p-4 border rounded bg-white mb-4">
+    <h4 class="fw-bold text-center mb-3">Terms & Conditions</h4>
+    <div class="terms-text" style="font-size: 0.95rem; line-height: 1.7;">
+      <h5><b>BROKER OBLIGATIONS</b></h5><hr>
+      Broker shall pay CARRIER for services rendered in an amount equal to the rates and charges agreed to as set forth on any Load Confirmation(s) that is issued and that supplements and amends this Agreement to the extent its terms conflict with those in this Agreement. This Agreement or the Load Confirmation also governs all accessorial services which may be required or performed. CARRIER shall not bill for any accessorial or other charge not approved in this Agreement or in any Load Confirmation(s). Rates may be amended orally but must be confirmed in writing within five working days of the modification in order to remain binding between the parties. As a condition precedent to payment.
+
+      <h5 class="mt-4"><b>CARRIER OBLIGATIONS</b></h5><hr>
+      CARRIER must submit proof of delivery with its invoices, and the invoices must reflect that CARRIER delivered the freight to its final destination. 
+      <br><br>
+      a. BROKER agrees to arrange for the transportation of a shipper's freight with CARRIER pursuant to the terms of this Agreement, and to comply with all federal, state, and local laws and regulations pertaining to the brokerage services covered by this Agreement.
+      <br><br>
+      The Parties agree that BROKER'S responsibilities under this Agreement are limited to arranging for the transportation of a shipper's freight with CARRIER, and not actually performing the transportation.
+
+      <h5 class="mt-4"><b>SLOT FEE (REFUNDABLE)</b></h5><hr>
+      The Carrier shall make a security deposit of $399 by direct payment, through instant payment methods to WIDE Range Logistics LLC. It is a refundable fee upon the first delivery, along with the payment of the load, for the securement of the load. Once carrier pays $399, carrier must get a Receipt for the Deposit Fee by the representative. The security deposit shall be refundable upon the termination of this Agreement, subject to any outstanding obligations or damages incurred by the Carrier. The Carrier may terminate this Agreement with one week's written notice to the Company. Broker is responsible for Detention.
+
+      <h5 class="mt-4"><b>ACCESSORIALS / INCIDENTALS</b></h5><hr>
+      To be eligible, Carrier must be checked in to shipper/receiver by the appointment time and submit all proof of detention, accessorials, and incidentals within 24-48 hours of delivery. Detention accrual begins 2 hours after appointment time if Broker is notified after 60 minutes of waiting. Provide time stamped BOL within 48 hours of delivery. 
+      <br><b>Detention Rate:</b> $40/hr after 2 hours (Max $200 per stop). 
+      <br><b>Layover:</b> $250. 
+      <br><b>TONU:</b> $200.
+
+      <h5 class="mt-4"><b>PAYMENT TERMS</b></h5><hr>
+      Signed Copy of Rate Confirmation and the company's Invoice must be sent to the broker to get paid. We have two options: 2% fee for Quick Pay (same-day deposit) or no fees for a standard 24-hour deposit. Factoring is also an option.
+
+      <h5 class="mt-4"><b>TERM</b></h5><hr>
+      The term of this Agreement shall be 90 days, commencing on the date listed above. If not cancelled by one of The Parties, the Agreement shall automatically renew itself for consecutive one-year terms. The Agreement can be terminated at any time by either Party with thirty (30) days written or electronic notice to the other party, provided all balances are settled.
+
+      <h5 class="mt-4"><b>ENTIRE CONTRACT & NOTICES</b></h5><hr>
+      The provisions contained in this AGREEMENT properly express and memorialize the complete understanding and agreement between the parties. If the carrier wants to end the contract or switch jobs, the carrier must give prior notice of 3 days before ending the contract.
+    </div>
+  </div>
+
+  <form method="post">
+    {% csrf_token %}
+    <div class="d-flex gap-2">
+      <a href="{% url 'agreements:sign' %}" class="btn btn-outline-secondary">Back</a>
+      <button class="btn btn-primary ms-auto">Finalize & Submit →</button>
+    </div>
+  </form>
+</div>
+
+<style>
+  .terms-text h5 {
+    color: #0d6efd;
+  }
+  .terms-text hr {
+    margin: 0.4rem 0;
+  }
+  .terms-text {
+    white-space: pre-line;
+  }
+   .stepper-item.active .step-counter {
+    background: linear-gradient(135deg, #114476, #165b99);
+  }
+  .stepper-item.active::after {
+    background: linear-gradient(90deg, #114476, #165b99);
+  }
+</style>
+<style>
+  .text-danger.small { font-size: 0.875rem; margin-top: 4px; }
+  input.is-invalid, select.is-invalid { border-color: #dc3545 !important; }
+
+  /* Color theme changed to #0b3760 */
+  .blue-header {
+    background: linear-gradient(90deg, #0b3760, #144b82);
+  }
+  .btn-primary {
+    background: linear-gradient(90deg, #0b3760, #144b82);
+  }
+  .stepper-item.active .step-counter {
+    background: linear-gradient(135deg, #0b3760, #144b82);
+  }
+  .stepper-item.active::after {
+    background: linear-gradient(90deg, #0b3760, #144b82);
+  }
+    .btn-primary {
+    background: linear-gradient(90deg, #114476, #165b99);
+    border: none;
+  }
+  .btn-primary:hover {
+    background: linear-gradient(90deg, #0e3c68, #114476);
+  }
+  a{
+    color:linear-gradient(90deg, #0e3c68, #114476);
+  }
+</style>
+{% endblock %}

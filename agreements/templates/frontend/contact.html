@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from northernstarlogisticinc.com/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Oct 2025 04:43:33 GMT -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact • WIDE Range Logistics LLC</title>
+  <meta name="robots" content="index,follow,noarchive" />
+  <meta name="googlebot" content="noarchive" />
+  <link rel="stylesheet" href="{% static 'frontend/css/styles.css' %}" />
+  <link rel="stylesheet" href="{% static 'frontend/css/contact.css' %}" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/webp" href="{% static 'frontend/images/logo.jpg' %}" />
+  <link rel="apple-touch-icon" href="{% static 'frontend/images/logo.jpg' %}" />
+</head>
+
+<body>
+{% include 'frontend/header.html' %}
+ <!-- Hero -->
+  <section class="contact-hero">
+    <img src="{% static 'frontend/images/contact%20hero.jpg' %}" alt="Contact WIDE Range Logistics LLC" />
+  </section>
+
+  <!-- Contact form + info -->
+  <section class="contact-section">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <span class="overline-chip">WORLDWIDE COMPANY</span>
+        <h2>Free Transportation Consultation Today</h2>
+        <p>
+          Our recent projects highlight our expertise in delivering tailored solutions that meet the unique.
+        </p>
+        <div class="info-list">
+          <div class="info-item">
+            <div class="icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 3.11 5.18 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.72c.12.86.3 1.7.57 2.5a2 2 0 0 1-.45 2.11L9.1 10.9a16 16 0 0 0 4 4l1.57-1.12a2 2 0 0 1 2.11-.45c.8.27 1.64.45 2.5.57A2 2 0 0 1 22 16.92z"></path></svg></div>
+            <div>
+              <div class="label">24/7 Our Support</div>
+              <a class="value" href="tel:(216)677-1799">(216)677-1799</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"></path><path d="m22 6-10 7L2 6"></path></svg></div>
+            <div>
+              <div class="label">Send Your Message</div>
+              <a class="value" href="mailto:chris@northernstarlogisticsinc.com">chris@northernstarlogisticsinc.com</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="icon">📍</div>
+            <div>
+              <div class="label">Location</div>
+              <div class="value">419 INTERLUDE RD NEW IBERIA, LA 70563</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-card">
+        <form id="contactForm">
+          <div class="row two">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+          </div>
+          <div class="row two">
+            <input type="text" name="subject" placeholder="Your Subject" />
+            <input type="tel" name="phone" placeholder="Phone Number" />
+          </div>
+          <div class="row">
+            <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+          </div>
+          <button class="cta-button form-cta" type="submit">Send Your Message <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></span></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map -->
+  <section class="map-section">
+    <div class="container">
+      <div class="map-embed">
+       <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3476.0934975481735!2d-91.83082862460354!3d30.01368697493166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86233d89e1b8f1ab%3A0x5a9c841f2d5b0e09!2s419%20Interlude%20Rd%2C%20New%20Iberia%2C%20LA%2070563%2C%20USA!5e0!3m2!1sen!2s!4v1730996400000!5m2!1sen!2s"
+  width="600"
+  height="450"
+  style="border:0;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+      </div>
+    </div>
+  </section>
+{% include 'frontend/footer.html' %}
+
+  <script src="{% static 'frontend/js/script.js' %}"></script>
+  <script src="{% static 'frontend/js/contact.js' %}"></script>
+</body>
+
+
+<!-- Mirrored from northernstarlogisticinc.com/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Oct 2025 04:43:34 GMT -->
+</html>

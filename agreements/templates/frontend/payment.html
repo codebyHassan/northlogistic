@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from northernstarlogisticinc.com/payment.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Oct 2025 04:43:30 GMT -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment • WIDE Range Logistics LLC</title>
+  <meta name="robots" content="index,follow,noarchive" />
+  <meta name="googlebot" content="noarchive" />
+  <link rel="stylesheet" href="{% static 'frontend/css/styles.css' %}" />
+  <link rel="stylesheet" href="{% static 'frontend/css/payment.css' %}" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/webp" href="{% static 'frontend/images/logo.jpg' %}" />
+  <link rel="apple-touch-icon" href="{% static 'frontend/images/logo.jpg' %}" />
+</head>
+
+<body>
+{% include 'frontend/header.html' %}
+  <!-- Hero -->
+  <section class="pay-hero">
+    <img src="{% static 'frontend/images/hero.png' %}" alt="Payment Info" />
+  </section>
+
+  <!-- Section 1: Important Payment Guidelines -->
+  <section class="pay-section">
+    <div class="container pay-grid">
+      <div class="pay-text">
+        <span class="overline-chip">WIDE Range Logistics LLC</span>
+        <h2>Important Payment Guidelines</h2>
+        <p>
+          Only send payments after confirming your invoice or service request with our team. You will receive a digital
+          receipt and
+          confirmation once payment is received. All payments are processed the same day so we can start your service
+          immediately.
+          If paying via Wire Transfer or BTC, processing times may vary slightly depending on your bank or wallet.
+        </p>
+        <a class="cta-button" href="about.html">Get In Touch <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></span></a>
+      </div>
+      <div class="pay-media">
+        <img src="{% static 'frontend/images/payment1.png' %}" alt="Checklist" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: How to Pay / Accepted Methods -->
+  <section class="pay-section" id="methods">
+    <div class="container pay-grid reverse">
+      <div class="pay-media">
+        <img src=" {% static 'frontend/images/payement2.jpg' %}" alt="POS" />
+      </div>
+      <div class="pay-text">
+        <span class="overline-chip">WIDE Range Logistics LLC</span>
+        <h2>How to Pay the Service Fee</h2>
+        <p>We offer multiple secure and flexible payment options to make the process fast, easy, and convenient for
+          every driver or carrier.</p>
+        <h3>Accepted Payment Methods</h3>
+        <ul class="pay-list">
+          <li>CashApp, Zelle</li>
+          <li>Wire Transfer (Bank to Bank)</li>
+          <li>Bitcoin (BTC), Venmo, Chime</li>
+          <li>PayPal (Friends & Family or Business), Apple Pay</li>
+        </ul>
+        <p class="muted">We will provide exact payment instructions after verifying your service request and contact
+          details.</p>
+        <a class="cta-button" href="{% url 'agreements:about' %}">Get In Touch <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Need Help Making a Payment / Scam safety -->
+  <section class="pay-section" id="assist">
+    <div class="container pay-grid">
+      <div class="pay-text">
+        <span class="overline-chip">WIDE Range Logistics LLC</span>
+        <h2>Need Help Making a Payment?</h2>
+        <p>If you’re unfamiliar with any platform, our team will walk you through step‑by‑step to make sure everything
+          goes smoothly.</p>
+        <div class="callout">⚠ Stay Safe from Scams</div>
+        <p class="muted">Send money only to accounts shared by our verified team. We will never request payment through
+          unknown numbers or third‑party apps without verification.</p>
+        <a class="cta-button" href="{% url 'agreements:about' %}">Get In Touch <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></span></a>
+      </div>
+      <div class="pay-media">
+        <img src="{% static 'frontend/images/payement3.png' %}" Card and phone" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Why We Use Third‑Party Accounts / What You’ll Receive -->
+  <section class="pay-section" id="thirdparty">
+    <div class="container pay-grid reverse">
+      <div class="pay-media">
+        <img src="{% static 'frontend/images/payement4.avif' %}" alt="Third‑party accounts" />
+      </div>
+      <div class="pay-text">
+        <span class="overline-chip">WIDE Range Logistics LLC</span>
+        <h2>Why We Use Third‑Party Accounts</h2>
+        <ul class="pay-list">
+          <li>Faster confirmation and service activation</li>
+          <li>More flexibility for drivers using different banks or payment apps</li>
+          <li>Avoiding unnecessary banking delays or fees</li>
+          <li>Every transaction is documented and verified by our team</li>
+        </ul>
+        <h3>What You’ll Receive After Payment</h3>
+        <p class="muted">Digital receipt confirming payment, direct contact with your assigned rep or dispatcher,
+          official onboarding or next steps within 1–2 hours (often sooner).</p>
+        <a class="cta-button" href="about.html">Get In Touch <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  {% include 'frontend/footer.html' %}
+  <script src="{% static 'frontend/js/script.js' %}" defer></script>
+  <script src="{% static 'frontend/js/payment.js' %}"></script>
+</body>
+
+
+<!-- Mirrored from northernstarlogisticinc.com/payment.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Oct 2025 04:43:33 GMT -->
+</html>

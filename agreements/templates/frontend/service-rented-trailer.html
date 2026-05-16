@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from northernstarlogisticinc.com/service-rented-trailer.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Oct 2025 04:43:29 GMT -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rented Trailer Program – $500 (3‑Month Lease)</title>
+  <meta name="robots" content="index,follow,noarchive" />
+  <meta name="googlebot" content="noarchive" />
+  <link rel="stylesheet" href="{% static 'frontend/css/styles.css' %}" />
+  <link rel="stylesheet" href="{% static 'frontend/css/service-rented-trailer.css' %}" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/webp" href="{% static 'frontend/images/logo.jpg' %}" />
+  <link rel="apple-touch-icon" href="{% static 'frontend/images/logo.jpg' %}" />
+</head>
+
+<body>
+{% include 'frontend/header.html' %}
+<br><br><br>
+  <!-- Hero with background image -->
+  <section class="service-hero" style="background-image:url('{% static 'frontend/images/landing%201.jpg' %}');">
+    <div class="container">
+      <h1>Rented Trailer Program – $500 for 3 Months</h1>
+      <p>Don’t have a trailer? No problem. We offer road‑ready trailers for rent so you can get moving immediately and
+        start earning without the upfront cost of buying your own.</p>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <section class="service-section">
+    <div class="container service-content">
+      <article class="service-block">
+        <h2>What You Get</h2>
+        <ul class="check-list">
+          <li>- A DOT‑Compliant Trailer — fully inspected and ready for immediate use</li>
+          <li>- Choice of trailer type — Dry Van or Reefer (based on availability)</li>
+          <li>- Maintenance support — we cover regular wear‑and‑tear maintenance</li>
+          <li>- Flexible use — for dedicated lanes, Amazon loads, or spot freight</li>
+          <li>- Legally registered & insured trailers — ready for dispatch fast</li>
+        </ul>
+      </article>
+
+      <article class="service-block">
+        <h2>Who This Is For</h2>
+        <ul class="dash-list">
+          <li>New owner‑operators who haven’t purchased a trailer yet</li>
+          <li>Drivers with tractor‑only setups</li>
+          <li>Fleet owners needing additional capacity fast</li>
+          <li>Anyone who wants to test lanes before committing to trailer ownership</li>
+        </ul>
+      </article>
+
+      <article class="service-block">
+        <h2>Why Our Trailer Rental Makes Sense</h2>
+        <ul class="dash-list">
+          <li>Low upfront cost — only $500 for 90 days of use</li>
+          <li>No long‑term contract — use it while you secure consistent loads</li>
+          <li>Avoid downtime — start hauling ASAP, even if your trailer is under repair</li>
+          <li>Better load access — some loads require specific trailer types; we help you qualify</li>
+        </ul>
+      </article>
+
+      <article class="service-block">
+        <h2>Requirements to Qualify</h2>
+        <ul class="dash-list">
+          <li>Valid CDL and active authority (or working under ours)</li>
+          <li>Insurance coverage (we help you apply if needed)</li>
+          <li>Signed trailer lease agreement</li>
+          <li>Trailer must be returned in working condition or renewed</li>
+        </ul>
+      </article>
+
+      <article class="service-block">
+        <h2>Add‑On Options Available</h2>
+        <p class="muted">Ask us about: trailer tracking, additional coverage, reefer units, and expedited dispatch
+          options.</p>
+        <a class="cta-button" href="{% url 'agreements:about' %}">Get In Touch <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></span></a>
+      </article>
+    </div>
+  </section>
+
+  {% include 'frontend/footer.html' %}
+
+  <script src="{% static 'frontend/js/script.js' %}" defer></script>
+  <script src="{% static 'frontend/js/service-rented-trailer.js' %}"></script>
+</body>
+
+
+<!-- Mirrored from northernstarlogisticinc.com/service-rented-trailer.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Oct 2025 04:43:29 GMT -->
+</html>

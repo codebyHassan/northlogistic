@@ -1,0 +1,2316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from northernstarlogisticinc.com/agreement.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Oct 2025 04:43:26 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Broker/Carrier Agreement - WIDE Range Logistics LLC.</title>
+    <meta name="robots" content="noarchive,index,follow">
+    <meta name="googlebot" content="noarchive">
+    <!-- Note: Update the favicon to your new company's logo -->
+    <link rel="icon" type="image/webp" href="assets/images/logo.webp" sizes="48x48">
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+    <script src="../cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="../cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    
+    <style>
+        /* CSS Reset & Base Styles */
+        * {
+            margin: 0;   
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0A2540; /* Deep Blue */
+            --primary-light: #0d3a65;
+            --primary-dark: #06182c;
+            --accent: #007BFF; /* Bright Blue */
+            --accent-light: #4DA8FF;
+            --accent-dark: #0056b3;
+            --red: #e63946;
+            --green: #2a9d8f;
+            --white: #FFFFFF;
+            --light: #F8FAFC;
+            --grey: #e9ecef;
+            --dark: #0A1929;
+            --text: #344767;
+            --text-light: #6c757d;
+            --border-color: #E5E7EB;
+            --shadow: 0 10px 30px rgba(10, 37, 64, 0.1);
+            --shadow-hover: 0 20px 40px rgba(10, 37, 64, 0.15);
+            --card-border-radius: 16px;
+            --card-padding: 25px;
+            --card-shadow: 0 8px 24px rgba(10, 37, 64, 0.07);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 123, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 123, 255, 0); }
+        }
+
+        body {
+            background-color: #f4f7f9;
+            margin: 0;
+            padding: 20px;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .agreement-container {
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 0;
+            background-color: transparent;
+            box-shadow: none;
+        }
+
+        /* Step Indicator Styles */
+        .step-indicator {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .step-indicator::before {
+            content: "";
+            position: absolute;
+            top: 24px;
+            left: 5%;
+            right: 5%;
+            height: 4px;
+            background-color: var(--grey);
+            z-index: 0;
+            border-radius: 4px;
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            transition: var(--transition);
+            width: 20%;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--white);
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+            font-weight: 700;
+            font-size: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            border: 4px solid var(--grey);
+        }
+
+        .step.active .step-number {
+            background: var(--accent);
+            color: white;
+            transform: scale(1.15);
+            border-color: var(--accent-light);
+            box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+            animation: pulse 1.5s infinite;
+        }
+
+        .step.completed .step-number {
+            background: var(--green);
+            color: white;
+            border-color: var(--green);
+        }
+
+        .step.completed .step-number::after {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            font-size: 20px;
+        }
+
+        .step-text {
+            font-size: 14px;
+            color: var(--text-light);
+            font-weight: 500;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .step.active .step-text {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* Form Container Styles */
+        .form-container {
+            background-color: var(--white);
+            border-radius: var(--card-border-radius);
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .form-container:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .form-container h2 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 28px;
+            font-weight: 700;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .form-subtitle {
+            color: var(--text-light);
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        /* Broker Info Card (Step 1) */
+        .broker-info-card {
+            background-color: var(--light);
+            border-radius: var(--card-border-radius);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            margin-bottom: 40px;
+            border: 1px solid var(--border-color);
+        }
+
+        .broker-info-header {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            padding: 20px 25px;
+            color: white;
+        }
+
+        .broker-info-header h3 {
+            color: white;
+            margin: 0 0 5px;
+            font-size: 22px;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .broker-info-header .decorative-line {
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-light);
+            border-radius: 3px;
+        }
+
+        .broker-info-content {
+            padding: 25px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px 25px;
+        }
+
+        .broker-info-row {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .broker-info-row.full-width {
+            grid-column: span 2;
+        }
+        
+        .broker-info-label {
+            font-weight: 600;
+            color: var(--primary-light);
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .broker-info-value {
+            color: var(--text);
+            font-weight: 500;
+        }
+        .broker-info-value a {
+            color: var(--accent-dark);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        .broker-info-value a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        /* Form Section Styles */
+        .form-section-title {
+            display: flex;
+            align-items: center;
+            margin: 40px 0 25px;
+        }
+
+        .form-section-title h3 {
+            color: var(--primary);
+            margin: 0 15px 0 0;
+            font-size: 20px;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            white-space: nowrap;
+        }
+
+        .form-section-title .decorative-line {
+            flex-grow: 1;
+            height: 2px;
+            background: linear-gradient(to right, var(--accent), transparent);
+        }
+
+        .carrier-form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .form-field label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text);
+            font-size: 15px;
+        }
+
+        .form-field input,
+        .form-field select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 15px;
+            transition: var(--transition);
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--white);
+            color: var(--text);
+        }
+        .form-field input::placeholder { color: var(--text-light); }
+
+        .form-field input:focus,
+        .form-field select:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+            outline: none;
+        }
+
+        .form-field input.error,
+        .form-field select.error {
+            border-color: var(--red);
+            background-color: rgba(230, 57, 70, 0.05);
+        }
+
+        .error-message {
+            color: var(--red);
+            font-size: 13px;
+            margin-top: 6px;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .error-message::before {
+            content: '\f06a'; /* fas fa-exclamation-circle */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            margin-right: 6px;
+        }
+
+        .note {
+            color: var(--text);
+            font-size: 14px;
+            margin-top: 20px;
+            display: flex;
+            align-items: flex-start;
+            background-color: rgba(0, 123, 255, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .note::before {
+            content: '\f05a'; /* fas fa-info-circle */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            margin-right: 12px;
+            font-size: 18px;
+            color: var(--accent);
+            margin-top: 2px;
+        }
+        
+        /* Button Styles */
+        .button-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 30px;
+            gap: 15px;
+        }
+
+        .back-button,
+        .continue-button {
+            padding: 14px 35px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            transition: var(--transition);
+            font-family: 'Poppins', sans-serif;
+            min-width: 160px;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .back-button {
+            background-color: var(--white);
+            color: var(--text);
+            border: 2px solid var(--border-color);
+        }
+
+        .back-button:hover {
+            background-color: var(--grey);
+            border-color: var(--grey);
+            transform: translateY(-2px);
+        }
+
+        .continue-button {
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.25);
+        }
+
+        .continue-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.35);
+        }
+
+        /* Terms Content Styles - Step 2 */
+        .terms-content {
+            background-color: var(--light);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            line-height: 1.7;
+            font-size: 15px;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+
+        .terms-section {
+            margin-bottom: 25px;
+        }
+        
+        .terms-section h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Agreement Checkbox */
+        .agreement-checkbox {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: var(--light);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .agreement-checkbox label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 16px;
+            color: var(--text);
+            font-weight: 500;
+            justify-content: center;
+        }
+
+        .agreement-checkbox input[type="checkbox"] {
+            margin-right: 12px;
+            width: 22px;
+            height: 22px;
+            accent-color: var(--accent);
+        }
+        
+        /* Payment Method Container - Step 3 */
+        .payment-method-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+        
+        .payment-option {
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            background-color: var(--white);
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .payment-option:hover {
+            border-color: var(--accent-light);
+            transform: translateY(-3px);
+            box-shadow: var(--card-shadow);
+        }
+        
+        .payment-option.selected {
+            border-color: var(--accent);
+            background-color: rgba(0, 123, 255, 0.05);
+            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
+        }
+        
+        .payment-option.selected::before {
+            content: '\f058'; /* far fa-check-circle */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            color: var(--accent);
+            font-size: 20px;
+        }
+
+        .payment-option-radio {
+            padding: 20px 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .payment-option-radio input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .payment-option-radio label {
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--text);
+            cursor: pointer;
+        }
+
+        /* Signature Input */
+        .signature-input {
+            font-family: 'Brush Script MT', 'Bradley Hand', cursive !important;
+            font-size: 26px !important;
+            color: var(--primary-dark);
+            text-align: center;
+            border-bottom: 2px solid var(--primary-light) !important;
+            border-top: none !important;
+            border-left: none !important;
+            border-right: none !important;
+            border-radius: 0 !important;
+            background: linear-gradient(to top, rgba(0,123,255,0.05) 0%, transparent 50%);
+        }
+
+        /* Agreement Document (PDF Template) - Step 4 */
+        .agreement-document-container {
+            padding: 20px 0;
+        }
+
+        .agreement-document {
+            background-color: white;
+            max-width: 850px;
+            width: 100%;
+            margin: 0 auto 30px;
+            padding: 50px 60px;
+            box-shadow: none;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 11pt;
+            line-height: 1.4;
+            color: #000;
+            border: none;
+            box-sizing: border-box;
+            overflow-x: hidden;
+            word-wrap: break-word;
+            page-break-inside: avoid;
+        }
+
+        .pdf-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #0A2540;
+            position: relative;
+        }
+
+        .pdf-header-left { 
+            flex: 1; 
+            padding-right: 20px;
+        }
+        
+        .pdf-logo {
+            width: 120px;
+            height: auto;
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        .pdf-logo img {
+            max-width: 100%;
+            max-height: 60px;
+            object-fit: contain;
+        }
+
+        .pdf-title {
+            font-size: 16pt;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 8px;
+            background: none;
+            page-break-after: avoid;
+        }
+        
+        .pdf-header-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px 25px;
+            font-size: 10pt;
+            margin-top: 20px;
+        }
+
+        .pdf-detail-row {
+            display: flex;
+            margin-bottom: 8px;
+            align-items: baseline;
+        }
+
+        .pdf-detail-row strong { 
+            font-weight: bold; 
+            min-width: 110px;
+            color: #000;
+            font-size: 9pt;
+        }
+        
+        .pdf-detail-row .value {
+            border-bottom: 1px solid #000;
+            padding: 2px 6px;
+            flex: 1;
+            min-height: 1.2em;
+            font-size: 9pt;
+            font-weight: normal;
+        }
+
+        .pdf-detail-full-width {
+            grid-column: span 2;
+        }
+
+        .pdf-broker-section,
+        .pdf-carrier-section {
+            background: white;
+            border: 1px solid #000;
+            padding: 15px;
+            page-break-inside: avoid;
+            margin-bottom: 15px;
+        }
+
+        .pdf-section { 
+            margin-bottom: 25px; 
+            page-break-inside: avoid;
+        }
+        .pdf-section-title {
+            font-size: 11pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            padding: 6px 8px;
+            background: #f0f0f0;
+            color: #000;
+            border: 1px solid #000;
+            letter-spacing: 0.5px;
+            page-break-after: avoid;
+        }
+        .pdf-section-content p {
+            margin-bottom: 10px;
+            text-align: justify;
+            line-height: 1.4;
+            font-size: 10pt;
+            page-break-inside: avoid;
+        }
+        
+        .pdf-signature-section { 
+            margin-top: 30px; 
+            page-break-before: auto;
+        }
+        
+        .pdf-signature-title {
+            font-size: 12pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #000;
+            color: #000;
+        }
+        
+        .pdf-signature-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 9pt;
+            page-break-inside: avoid;
+        }
+        
+        .pdf-signature-table td {
+            padding: 6px 8px;
+            border: 1px solid #000;
+            vertical-align: top;
+        }
+        
+        .pdf-signature-table .sig-label {
+            font-weight: bold;
+            width: 90px;
+            background: #f5f5f5;
+        }
+        
+        .pdf-signature-table .sig-value {
+            min-width: 180px;
+            min-height: 25px;
+        }
+        
+        .pdf-signature-table .broker-header {
+            background: #e8e8e8;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 10pt;
+            padding: 8px 6px;
+        }
+        
+        .pdf-signature-table .carrier-header {
+            background: #e8e8e8;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 10pt;
+            padding: 8px 6px;
+        }
+        
+        #pdf-signature {
+            font-family: 'Brush Script MT', 'Bradley Hand', cursive;
+            font-size: 16pt;
+            color: #000;
+            line-height: 1;
+            display: block;
+            padding: 5px 0;
+        }
+        
+        .signature-image { 
+            max-height: 30px; 
+            width: auto; 
+        }
+
+        /* Desktop/Mobile Visibility */
+        .desktop-only { display: block; }
+        .mobile-only { display: none; }
+
+        /* Clean PDF Table */
+        .pdf-clean-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 9pt;
+        }
+
+        .pdf-clean-table td {
+            border: 1px solid #000;
+            padding: 6px 8px;
+            vertical-align: top;
+        }
+
+        .pdf-clean-table .table-header {
+            background: #f0f0f0;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 10pt;
+        }
+
+        .pdf-clean-table .table-label {
+            font-weight: bold;
+            width: 120px;
+            background: #f8f8f8;
+        }
+
+        .pdf-clean-table .table-value {
+            background: white;
+        }
+        
+        .pdf-certificate-section {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f5f5f5;
+            border: 1px solid #000;
+            page-break-before: auto;
+        }
+        /* Other PDF styles remain the same from user's provided CSS */
+        .pdf-certificate-title{font-size:12pt;font-weight:700;text-align:center;margin-bottom:20px;text-transform:uppercase}.pdf-certificate-details{display:flex;justify-content:space-between;margin-bottom:20px;font-size:10pt;line-height:1.4}.pdf-certificate-ids{text-align:left}.pdf-certificate-address{text-align:right}.pdf-certificate-address p{margin:0}.pdf-certificate-body{font-size:10pt;text-align:justify;line-height:1.5;margin-bottom:20px}.pdf-certificate-body p{margin-bottom:10px}.pdf-certificate-signature{margin-top:30px;text-align:right;font-size:10pt}.pdf-certificate-signature p{margin:0;line-height:1.4}.pdf-certificate-note{margin-top:30px;font-size:9pt;font-weight:700;text-align:left}.pdf-certificate-note p{margin-bottom:5px}
+        
+        /* Done Step Styles - Step 5 */
+        .done-container { max-width: 850px; margin: 0 auto 30px; }
+        .done-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .done-header h2 { font-size: 36px; font-family: 'Poppins', sans-serif; color: var(--primary); }
+        .done-header .form-subtitle { font-size: 18px; }
+
+        .decorative-line-center {
+            margin: 15px auto 25px;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--green));
+            border-radius: 2px;
+        }
+        .pdf-preview {
+            margin: 30px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .done-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        .done-info-card {
+            background-color: var(--light);
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid var(--border-color);
+        }
+
+        .done-info-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--primary);
+            margin: 0 0 15px 0;
+            font-size: 18px;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .done-info-card h3 i {
+            color: var(--accent);
+            font-size: 22px;
+            width: 25px;
+            text-align: center;
+        }
+
+        .done-info-card p {
+            margin-bottom: 10px;
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text);
+            display: flex;
+        }
+
+        .done-info-card p strong {
+            color: var(--primary);
+            margin-right: 8px;
+            min-width: 140px;
+            font-weight: 600;
+        }
+
+        .signature-value {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 20px;
+            color: var(--primary-dark);
+        }
+
+        .payment-value {
+            font-weight: 600;
+            color: var(--green);
+        }
+
+        /* Loading Overlay & Download Button */
+        .loading-overlay {
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(10, 37, 64, 0.85);
+            backdrop-filter: blur(5px);
+            display: flex; flex-direction: column; justify-content: center;
+            align-items: center; z-index: 1000; color: white;
+            transition: opacity 0.3s ease;
+        }
+        .spinner {
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 5px solid var(--accent-light);
+            width: 60px; height: 60px;
+            animation: spin 1s linear infinite;
+            margin-bottom: 25px;
+        }
+        .loading-overlay p { 
+            font-size: 18px; 
+            font-weight: 500; 
+            text-align: center;
+            max-width: 500px;
+            padding: 0 20px;
+        }
+        .loading-overlay .status-message {
+            font-size: 14px;
+            margin-top: 10px;
+            opacity: 0.8;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        
+        /* Success/Error indicators */
+        .status-success {
+            color: var(--green) !important;
+        }
+        .status-error {
+            color: var(--red) !important;
+        }
+        .status-warning {
+            color: #ffa726 !important;
+        }
+        
+        .download-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .download-button {
+            background: linear-gradient(135deg, var(--green), var(--accent));
+            color: white; border: none; padding: 15px 35px;
+            border-radius: 50px; font-size: 18px; font-weight: 600;
+            cursor: pointer; transition: var(--transition);
+            display: flex; align-items: center; gap: 12px;
+            margin-bottom: 20px; box-shadow: 0 4px 20px rgba(42, 157, 143, 0.3);
+        }
+
+        .download-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(42, 157, 143, 0.4);
+        }
+
+        .download-section .note {
+            text-align: center;
+            max-width: 600px;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .broker-info-content {
+                grid-template-columns: 1fr;
+            }
+            .broker-info-row.full-width {
+                grid-column: span 1;
+            }
+            .pdf-header-details {
+                grid-template-columns: auto 1fr;
+                gap: 5px 15px;
+            }
+            .agreement-document {
+                padding: 30px 25px;
+                margin: 0 auto 20px;
+            }
+            .pdf-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .pdf-logo {
+                margin-top: 15px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body { 
+                padding: 5px; 
+                overflow-x: hidden;
+            }
+            .agreement-container { 
+                margin: 10px auto; 
+                padding: 0 5px;
+                max-width: 100%;
+            }
+            .form-container { 
+                padding: 20px 10px; 
+                margin: 0 0 15px 0;
+            }
+            .step-text { display: none; }
+            
+            /* PDF Document Mobile Styles */
+            .agreement-document-container {
+                padding: 10px 0;
+                overflow-x: hidden;
+            }
+            .agreement-document {
+                padding: 15px 10px;
+                font-size: 10pt;
+                margin: 0 0 15px 0;
+                border: 1px solid #000;
+                overflow-x: hidden;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                max-width: 100%;
+            }
+            .pdf-header {
+                margin-bottom: 15px;
+                text-align: center;
+            }
+            .pdf-title {
+                font-size: 12pt;
+                margin-bottom: 10px;
+                padding: 5px 0;
+            }
+            .pdf-logo {
+                position: static;
+                text-align: center;
+                width: 50px;
+                margin: 8px auto;
+                display: block;
+            }
+            /* Desktop/Mobile Visibility */
+            .desktop-only { display: none !important; }
+            .mobile-only { display: block !important; }
+
+            /* Clean mobile table */
+            .pdf-clean-table {
+                font-size: 8pt;
+                margin: 10px 0;
+            }
+
+            .pdf-clean-table td {
+                padding: 4px 6px;
+                word-break: break-word;
+            }
+
+            .pdf-clean-table .table-header {
+                font-size: 8pt;
+                padding: 6px 4px;
+            }
+
+            .pdf-clean-table .table-label {
+                width: 80px;
+                font-size: 7pt;
+            }
+
+            .pdf-clean-table .table-value {
+                font-size: 8pt;
+            }
+
+            /* Mobile table styling */
+            .pdf-info-table {
+                font-size: 8pt;
+                width: 100%;
+            }
+            .pdf-info-table td {
+                padding: 4px 6px;
+                word-break: break-word;
+                overflow-wrap: break-word;
+            }
+            .pdf-info-table .label {
+                width: 70px;
+                font-size: 7pt;
+            }
+            .pdf-info-table .value {
+                font-size: 8pt;
+                min-width: 80px;
+            }
+            .pdf-broker-section,
+            .pdf-carrier-section {
+                background: white;
+                padding: 12px;
+                border: 1px solid #000;
+                margin-bottom: 10px;
+            }
+            .pdf-detail-row {
+                margin-bottom: 10px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .pdf-detail-row strong {
+                min-width: auto;
+                margin-bottom: 3px;
+                font-size: 8pt;
+            }
+            .pdf-detail-row .value {
+                width: 100%;
+                padding: 4px 8px;
+                font-size: 9pt;
+            }
+            .pdf-title {
+                font-size: 14pt;
+                margin-bottom: 20px;
+                padding: 10px;
+            }
+            .pdf-section {
+                margin-bottom: 20px;
+            }
+            .pdf-section-title {
+                font-size: 10pt;
+                margin-bottom: 8px;
+                padding: 6px 10px;
+            }
+            .pdf-section-content p {
+                margin-bottom: 10px;
+                font-size: 9pt;
+                line-height: 1.5;
+            }
+            
+            /* Signature section mobile */
+            .pdf-signature-section {
+                margin-top: 20px;
+            }
+            .pdf-signature-title {
+                font-size: 10pt;
+                margin-bottom: 10px;
+            }
+            .pdf-signature-table {
+                font-size: 9pt;
+            }
+            .pdf-signature-table td {
+                padding: 6px 8px;
+                word-break: break-word;
+            }
+            .pdf-signature-table .sig-label {
+                width: 80px;
+                font-size: 8pt;
+            }
+            .pdf-signature-table .sig-value {
+                min-width: 100px;
+                font-size: 8pt;
+            }
+            .pdf-signature-table .broker-header,
+            .pdf-signature-table .carrier-header {
+                font-size: 9pt;
+                padding: 8px 6px;
+            }
+            #pdf-signature {
+                font-size: 12pt;
+            }
+            .signature-image {
+                max-height: 20px;
+            }
+            
+            /* Certificate section mobile */
+            .pdf-certificate-details {
+                flex-direction: column;
+                margin-bottom: 15px;
+            }
+            .pdf-certificate-ids,
+            .pdf-certificate-address {
+                text-align: left;
+                margin-bottom: 10px;
+            }
+            .pdf-certificate-body {
+                font-size: 9pt;
+            }
+            
+            /* Done page mobile */
+            .done-content { grid-template-columns: 1fr; }
+            .done-info-card p { 
+                flex-direction: column; 
+                align-items: flex-start; 
+                margin-bottom: 8px;
+            }
+            .done-info-card p strong { 
+                min-width: auto; 
+                margin-bottom: 4px;
+            }
+            
+            /* PDF Preview mobile */
+            .pdf-preview {
+                margin: 20px 0;
+            }
+            #pdfPreview {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            body { 
+                padding: 3px; 
+                overflow-x: hidden;
+            }
+            .agreement-container { 
+                margin: 5px auto; 
+                padding: 0 3px;
+                max-width: 100%;
+            }
+            .form-container { 
+                padding: 15px 8px; 
+                margin: 0 0 10px 0;
+            }
+            .carrier-form-grid { grid-template-columns: 1fr; }
+            .button-container {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 20px;
+            }
+            .back-button, .continue-button { width: 100%; }
+            .payment-method-container { 
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); 
+                gap: 8px; 
+            }
+            .payment-option-radio { 
+                padding: 15px 8px; 
+            }
+            .payment-option-radio label { 
+                font-size: 13px; 
+            }
+            .step-number { 
+                width: 40px; 
+                height: 40px; 
+                font-size: 16px; 
+            }
+            .step-indicator::before { 
+                left: 10%; 
+                right: 10%; 
+            }
+            .form-container h2 { 
+                font-size: 22px; 
+            }
+            .done-header h2 { 
+                font-size: 24px; 
+            }
+            
+            /* Agreement document extra small screens */
+            .agreement-document-container {
+                padding: 5px 0;
+            }
+            .agreement-document {
+                padding: 12px 8px;
+                font-size: 9pt;
+                overflow-x: hidden;
+                word-wrap: break-word;
+            }
+            .pdf-header-details {
+                font-size: 8pt;
+            }
+            .pdf-section-content p {
+                font-size: 8pt;
+            }
+            .pdf-title {
+                font-size: 12pt;
+            }
+            .pdf-certificate-body {
+                font-size: 8pt;
+            }
+            
+            /* Download section mobile */
+            .download-section {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .download-button {
+                width: 100%;
+                margin: 5px 0;
+                justify-content: center;
+            }
+            #emailButton {
+                margin-left: 0 !important;
+            }
+            
+            /* Loading overlay mobile */
+            .loading-overlay p {
+                font-size: 16px;
+                padding: 0 15px;
+            }
+            .spinner {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        /* Extra small screens (phones in portrait) */
+        @media (max-width: 375px) {
+            .agreement-document {
+                padding: 10px 8px;
+                font-size: 8pt;
+            }
+            .pdf-header-details {
+                font-size: 7pt;
+            }
+            .pdf-section-content p {
+                font-size: 7pt;
+            }
+            .pdf-title {
+                font-size: 11pt;
+            }
+            .form-container h2 {
+                font-size: 20px;
+            }
+            .step-number {
+                width: 35px;
+                height: 35px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="agreement-container" id="agreementContainer">
+        <!-- Step Indicator -->
+        <div class="step-indicator">
+            <div class="step active" data-step="1">
+                <div class="step-number">1</div>
+                <div class="step-text">Carrier Info</div>
+            </div>
+            <div class="step" data-step="2">
+                <div class="step-number">2</div>
+                <div class="step-text">Conditions</div>
+            </div>
+            <div class="step" data-step="3">
+                <div class="step-number">3</div>
+                <div class="step-text">Sign Agreement</div>
+            </div>
+            <div class="step" data-step="4">
+                <div class="step-number">4</div>
+                <div class="step-text">Preview</div>
+            </div>
+            <div class="step" data-step="5">
+                <div class="step-number">5</div>
+                <div class="step-text">Done</div>
+            </div>
+        </div>
+
+        <!-- Step 1: Carrier Info -->
+        <div class="form-container" id="step1">
+            <h2>Broker/Carrier Agreement</h2>
+            <p class="form-subtitle">Please enter your carrier information below.</p>
+
+            <!-- Broker Info Card -->
+            <div class="broker-info-card">
+                <div class="broker-info-header">
+                    <h3>Broker Information</h3>
+                    <div class="decorative-line"></div>
+                </div>
+                <div class="broker-info-content">
+                    <div class="broker-info-row">
+                        <div class="broker-info-label">Broker Name:</div>
+                        <div class="broker-info-value">WIDE Range Logistics LLC.</div>
+                    </div>
+                    <div class="broker-info-row">
+                        <div class="broker-info-label">USDOT Number:</div>
+                        <div class="broker-info-value">USDOT# 2248522</div>
+                    </div>
+                    <div class="broker-info-row">
+                        <div class="broker-info-label">MC Number:</div>
+                        <div class="broker-info-value">MC# 741715</div>
+                    </div>
+                    <div class="broker-info-row">
+                        <div class="broker-info-label">Email:</div>
+                        <div class="broker-info-value"><a
+                                href="mailto:chris@northernstarlogisticsinc.com">chris@northernstarlogisticsinc.com</a></div>
+                    </div>
+                    <div class="broker-info-row full-width">
+                        <div class="broker-info-label">Address:</div>
+                        <div class="broker-info-value">8340 HUNTING DRIVE, NORTH ROYALTON, OH 44133</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carrier Details -->
+            <div class="form-section-title">
+                <h3>Carrier Details</h3>
+                <div class="decorative-line"></div>
+            </div>
+            <div class="carrier-form-grid">
+                <div class="form-field">
+                    <label for="carrierName">Carrier Name:</label>
+                    <input type="text" id="carrierName" name="carrierName" placeholder="Enter your carrier name"
+                        required>
+                    <div class="error-message" id="carrierNameError" style="display: none;"></div>
+                </div>
+                <div class="form-field">
+                    <label for="carrierUSDOT">USDOT/MC Number:</label>
+                    <input type="text" id="carrierUSDOT" name="carrierUSDOT" placeholder="Enter your USDOT or MC number"
+                        required>
+                    <div class="error-message" id="carrierUSDOTError" style="display: none;"></div>
+                </div>
+                <div class="form-field">
+                    <label for="carrierPhone">Phone Number:</label>
+                    <input type="tel" id="carrierPhone" name="carrierPhone" placeholder="Enter your phone number"
+                        required>
+                    <div class="error-message" id="carrierPhoneError" style="display: none;"></div>
+                </div>
+                <div class="form-field">
+                    <label for="agreementDate">Agreement Date:</label>
+                    <input type="date" id="agreementDate" name="agreementDate" required>
+                    <div class="error-message" id="agreementDateError" style="display: none;"></div>
+                </div>
+            </div>
+
+            <!-- Banking Information -->
+            <div class="form-section-title">
+                <h3>Banking Information</h3>
+                <div class="decorative-line"></div>
+            </div>
+            <div class="carrier-form-grid">
+                <div class="form-field">
+                    <label for="bankName">Bank Name:</label>
+                    <input type="text" id="bankName" name="bankName" placeholder="Enter your bank name" required>
+                    <div class="error-message" id="bankNameError" style="display: none;"></div>
+                </div>
+                <div class="form-field">
+                    <label for="accountNumber">Account Number:</label>
+                    <input type="text" inputmode="numeric" id="accountNumber" name="accountNumber"
+                        placeholder="Enter your account number" required>
+                    <div class="error-message" id="accountNumberError" style="display: none;"></div>
+                </div>
+                <div class="form-field">
+                    <label for="accountType">Account Type:</label>
+                    <select id="accountType" name="accountType" required>
+                        <option value="">Select an account type</option>
+                        <option value="Checking">Checking</option>
+                        <option value="Savings">Savings</option>
+                        <option value="Business">Business</option>
+                    </select>
+                    <div class="error-message" id="accountTypeError" style="display: none;"></div>
+                </div>
+            </div>
+
+            <div class="note">All information provided will be kept confidential and secure.
+                If you are not comfortable providing banking information, please enter "0000" in all banking fields.
+            </div>
+        </div>
+
+        <!-- Step 2: Conditions -->
+        <div class="form-container" id="step2" style="display: none;">
+            <h2>Terms and Conditions</h2>
+            <p class="form-subtitle">Please review the following terms and conditions carefully.</p>
+
+            <div class="terms-content">
+                <div class="terms-section">
+                    <h3>BROKER OBLIGATIONS</h3>
+                    <p>Broker shall pay CARRIER for services rendered in an amount equal to the rates and charges agreed to as set forth on any Load Confirmation(s) that is issued and that supplements and amends this Agreement to the extent its terms conflict with those in this Agreement. This Agreement or the Load Confirmation also governs all accessorial services which may be required or performed. CARRIER shall not bill for any accessorial or other charge not approved in this Agreement or in any Load Confirmation(s). Rates may be amended orally but must be confirmed in writing within five working days of the modification in order to remain binding between the parties. As a condition precedent to payment.</p>
+                </div>
+                <div class="terms-section">
+                    <h3>CARRIER OBLIGATIONS</h3>
+                    <p>CARRIER must submit proof of delivery with its invoices, and the invoices must reflect that CARRIER delivered the freight to its final destination. a. BROKER agrees to arrange for the transportation of a shipper's freight with CARRIER pursuant to the terms of this Agreement, and to comply with all federal, state, and local laws and regulations pertaining to the brokerage services covered by this Agreement.</p>
+                    <p>The Parties agree that BROKER'S responsibilities under this Agreement are limited to arranging for the transportation of a shipper's freight with CARRIER, and not actually performing the transportation.</p>
+                    <p><b>SLOT FEE (REFUNDABLE):</b> The Carrier shall make a security deposit of $399 by direct payment, through instant payment methods to WIDE Range Logistics LLC. It is a refundable fee upon the first delivery, along with the payment of the load, for the securement of the load. Once carrier pays $399, carrier must get a Receipt for the Deposit Fee by the representative. The security deposit shall be refundable upon the termination of this Agreement, subject to any outstanding obligations or damages incurred by the Carrier. The Carrier may terminate this Agreement with one week's written notice to the Company. Broker is responsible for Detention.</p>
+                    <p><b>Accessorials/Incidentals:</b> To be eligible, Carrier must be checked in to shipper/receiver by the appointment time and submit all proof of detention, accessorials, and incidentals within 24-48 hours of delivery. Detention accrual begins 2 hours after appointment time if Broker is notified after 60 minutes of waiting. Provide time stamped BOL within 48 hours of delivery. Detention Rate: $40/hr after 2 hours (Max $200 per stop). Layover: $250. TONU: $200.</p>
+                </div>
+                <div class="terms-section">
+                    <h3>PAYMENT TERMS</h3>
+                    <p>Signed Copy of Rate Confirmation and the company's Invoice must be sent to the broker to get paid. We have two options: 2% fee for Quick Pay (same-day deposit) or no fees for a standard 24-hour deposit. Factoring is also an option.</p>
+                </div>
+                <div class="terms-section">
+                    <h3>TERM</h3>
+                    <p>The term of this Agreement shall be 90 days, commencing on the date listed above. If not cancelled by one of The Parties, the Agreement shall automatically renew itself for consecutive one-year terms. The Agreement can be terminated at any time by either Party with thirty (30) days written or electronic notice to the other party, provided all balances are settled.</p>
+                </div>
+                <div class="terms-section">
+                    <h3>ENTIRE CONTRACT & NOTICES</h3>
+                    <p>The provisions contained in this AGREEMENT properly express and memorialize the complete understanding and agreement between the parties. If the carrier wants to end the contract or switch jobs, the carrier must give prior notice of 3 days before ending the contract.</p>
+                </div>
+            </div>
+
+            <div class="agreement-checkbox">
+                <label><input type="checkbox" checked readonly><span>I have read and agree to the terms and conditions</span></label>
+            </div>
+        </div>
+
+        <!-- Step 3: Agreement Info -->
+        <div class="form-container" id="step3" style="display: none;">
+            <h2>Agreement Information</h2>
+            <p class="form-subtitle">Provide your details and select a payment method to complete the agreement.</p>
+
+            <div class="form-section-title">
+                <h3>Signatory Information</h3>
+                <div class="decorative-line"></div>
+            </div>
+            <div class="carrier-form-grid">
+                <div class="form-field">
+                    <label for="printName">Full Name:</label>
+                    <input type="text" id="printName" name="printName" placeholder="Enter your full name" required>
+                    <div class="error-message" id="printNameError" style="display: none;"></div>
+                </div>
+                <div class="form-field">
+                    <label for="title">Title/Position:</label>
+                    <input type="text" id="title" name="title" placeholder="e.g., Owner, Dispatcher" required>
+                    <div class="error-message" id="titleError" style="display: none;"></div>
+                </div>
+                <div class="form-field">
+                    <label for="signature">Signature:</label>
+                    <input type="text" id="signature" name="signature" placeholder="Type your name to sign"
+                        class="signature-input" required>
+                    <div class="error-message" id="signatureError" style="display: none;"></div>
+                </div>
+                <div class="form-field">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+                    <div class="error-message" id="dateError" style="display: none;"></div>
+                </div>
+                <div class="form-field" style="grid-column: span 2;">
+                    <label for="email">Email Address for Correspondence:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    <div class="error-message" id="emailError" style="display: none;"></div>
+                </div>
+            </div>
+
+            <div class="form-section-title">
+                <h3>Preferred Payment Method for Security Deposit (Refundable)</h3>
+                <div class="decorative-line"></div>
+            </div>
+            <div class="payment-method-container">
+                <div class="payment-option selected" data-option="Zelle">
+                    <div class="payment-option-radio">
+                        <input type="radio" id="Zelle" name="paymentOption" value="Zelle" checked>
+                        <label for="Zelle">Zelle</label>
+                    </div>
+                </div>
+                <div class="payment-option" data-option="Cashapp">
+                    <div class="payment-option-radio">
+                        <input type="radio" id="Cashapp" name="paymentOption" value="Cashapp">
+                        <label for="Cashapp">Cashapp</label>
+                    </div>
+                </div>
+                <div class="payment-option" data-option="PayPal">
+                    <div class="payment-option-radio">
+                        <input type="radio" id="PayPal" name="paymentOption" value="PayPal">
+                        <label for="PayPal">PayPal</label>
+                    </div>
+                </div>
+                <div class="payment-option" data-option="Venmo">
+                    <div class="payment-option-radio">
+                        <input type="radio" id="Venmo" name="paymentOption" value="Venmo">
+                        <label for="Venmo">Venmo</label>
+                    </div>
+                </div>
+                <div class="payment-option" data-option="Chime">
+                    <div class="payment-option-radio">
+                        <input type="radio" id="Chime" name="paymentOption" value="Chime">
+                        <label for="Chime">Chime</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="agreement-checkbox" style="margin-top: 30px;">
+                <label><input type="checkbox" checked readonly><span>I have read and agree to the terms set forth in this agreement.</span></label>
+            </div>
+        </div>
+
+        <!-- Step 4: Agreement Document Preview -->
+        <div class="form-container" id="step4" style="display: none;">
+            <h2>Agreement Preview</h2>
+            <p class="form-subtitle">Please review the generated agreement before final submission.</p>
+            <div class="agreement-document-container">
+                <div class="agreement-document" id="agreementDoc">
+                    <!-- PDF Header -->
+                    <div class="pdf-header">
+                        <div class="pdf-header-left">
+                            <div class="pdf-title">Broker/Carrier Agreement</div>
+                            
+                            <!-- Mobile Clean Table Layout -->
+                            <div class="mobile-only">
+                                <table class="pdf-clean-table">
+                                    <tr>
+                                        <td class="table-header" colspan="2">BROKER INFORMATION</td>
+                                        <td class="table-header" colspan="2">CARRIER INFORMATION</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-label">Company:</td>
+                                        <td class="table-value">WIDE Range Logistics LLC.</td>
+                                        <td class="table-label">Company:</td>
+                                        <td class="table-value" id="pdf-mobile-carrierName"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-label">MC Number:</td>
+                                        <td class="table-value">MC# 741715</td>
+                                        <td class="table-label">USDOT/MC:</td>
+                                        <td class="table-value" id="pdf-mobile-carrierUSDOT"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-label">U.S. DOT:</td>
+                                        <td class="table-value">USDOT# 2248522</td>
+                                        <td class="table-label">Phone:</td>
+                                        <td class="table-value" id="pdf-mobile-carrierPhone"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-label">Email:</td>
+                                        <td class="table-value">chris@northernstarlogisticsinc.com</td>
+                                        <td class="table-label">Date:</td>
+                                        <td class="table-value" id="pdf-mobile-agreementDate"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-label">Address:</td>
+                                        <td class="table-value" colspan="3">8340 HUNTING DRIVE, NORTH ROYALTON, OH 44133</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-label">Banking:</td>
+                                        <td class="table-value" colspan="3">
+                                            <span id="pdf-mobile-bankName"></span> | Acc: <span id="pdf-mobile-accountNumber"></span> | <span id="pdf-mobile-accountType"></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                            <div class="pdf-header-details desktop-only">
+                                <!-- Broker Information Column -->
+                                <div class="pdf-broker-section">
+                                    <h4 style="color: #000; margin-bottom: 12px; font-size: 10pt; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 4px;">Broker Information</h4>
+                                    <div class="pdf-detail-row">
+                                        <strong>Company Name:</strong>
+                                        <span class="value">WIDE Range Logistics LLC.</span>
+                                    </div>
+                                    <div class="pdf-detail-row">
+                                        <strong>MC Number:</strong>
+                                        <span class="value">MC# 741715</span>
+                                    </div>
+                                    <div class="pdf-detail-row">
+                                        <strong>U.S. DOT Number:</strong>
+                                        <span class="value">USDOT# 2248522</span>
+                                    </div>
+                                    <div class="pdf-detail-row">
+                                        <strong>Email:</strong>
+                                        <span class="value">chris@northernstarlogisticsinc.com</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Carrier Information Column -->
+                                <div class="pdf-carrier-section">
+                                    <h4 style="color: #000; margin-bottom: 12px; font-size: 10pt; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 4px;">Carrier Information</h4>
+                                    <div class="pdf-detail-row">
+                                        <strong>Company Name:</strong>
+                                        <span class="value" id="pdf-carrierName"></span>
+                                    </div>
+                                    <div class="pdf-detail-row">
+                                        <strong>USDOT/MC:</strong>
+                                        <span class="value" id="pdf-carrierUSDOT"></span>
+                                    </div>
+                                    <div class="pdf-detail-row">
+                                        <strong>Phone Number:</strong>
+                                        <span class="value" id="pdf-carrierPhone"></span>
+                                    </div>
+                                    <div class="pdf-detail-row">
+                                        <strong>Agreement Date:</strong>
+                                        <span class="value" id="pdf-agreementDate"></span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Full Width Address -->
+                                <div class="pdf-detail-full-width">
+                                    <div class="pdf-detail-row">
+                                        <strong>Broker Address:</strong>
+                                        <span class="value">8340 HUNTING DRIVE, NORTH ROYALTON, OH 44133</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Banking Information -->
+                                <div class="pdf-detail-full-width" style="margin-top: 20px;">
+                                    <h4 style="color: #0A2540; margin-bottom: 15px; font-size: 11pt; text-transform: uppercase; border-bottom: 1px solid #0A2540; padding-bottom: 5px;">Banking Information</h4>
+                                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                                        <div class="pdf-detail-row">
+                                            <strong>Bank Name:</strong>
+                                            <span class="value" id="pdf-bankName"></span>
+                                        </div>
+                                        <div class="pdf-detail-row">
+                                            <strong>Account Number:</strong>
+                                            <span class="value" id="pdf-accountNumber"></span>
+                                        </div>
+                                        <div class="pdf-detail-row">
+                                            <strong>Account Type:</strong>
+                                            <span class="value" id="pdf-accountType"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pdf-logo">
+                            <img src="assets/images/logo.webp" alt="Northern Star Logistics Logo">
+                        </div>
+                    </div>
+
+                    <!-- Intro Section -->
+                    <div class="pdf-section">
+                        <div class="pdf-section-content">
+                            <p>This Broker/Carrier Agreement is entered into by and between: <strong>WIDE Range Logistics LLC.</strong> (hereinafter "BROKER"), and <strong id="pdf-intro-carrierName"></strong> (hereinafter "CARRIER") on this date: <strong id="pdf-intro-agreementDate"></strong>.</p>
+                            <p>This Agreement is intended to enhance the joint efforts of both entities in developing a more secure environment for the transportation of conveyances and cargo. The CARRIER agrees to develop, implement, and maintain a verifiable, documented program to enhance security procedures throughout its supply chain process, consistent with industry best practices.</p>
+                        </div>
+                    </div>
+
+                    <!-- Broker Obligations -->
+                    <div class="pdf-section">
+                        <div class="pdf-section-title">Broker Obligations</div>
+                        <div class="pdf-section-content">
+                            <p>Broker shall pay CARRIER for services rendered in an amount equal to the rates and charges agreed to on any Load Confirmation(s). This Agreement or the Load Confirmation also governs all accessorial services. CARRIER shall not bill for any charge not pre-approved in this Agreement or in a Load Confirmation. As a condition precedent to payment, CARRIER must submit a clear proof of delivery with its invoices.</p>
+                        </div>
+                    </div>
+
+                    <!-- Carrier Obligations -->
+                    <div class="pdf-section">
+                        <div class="pdf-section-title">Carrier Obligations</div>
+                        <div class="pdf-section-content">
+                            <p>CARRIER agrees to arrange for the transportation of a shipper's freight pursuant to the terms of this Agreement and to comply with all federal, state, and local laws. The Parties agree that BROKER'S responsibilities are limited to arranging for transportation, not performing it.</p>
+                        </div>
+                    </div>
+
+                    <!-- SLOT FEE Section -->
+                    <div class="pdf-section">
+                        <div class="pdf-section-title">SLOT FEE (REFUNDABLE)</div>
+                        <div class="pdf-section-content">
+                            <p>The Carrier shall make a security deposit of $399 by direct payment through instant payment methods to WIDE Range Logistics LLC. This is a refundable fee, returned with the payment for the first delivered load, to secure the load. The Carrier must obtain a receipt for this deposit. The deposit is fully refundable upon termination of this Agreement, subject to any outstanding obligations or damages. The Carrier may terminate this Agreement with one week's written notice. Broker is responsible for Detention.</p>
+                        </div>
+                    </div>
+
+                    <!-- Payment Terms -->
+                    <div class="pdf-section">
+                        <div class="pdf-section-title">Payment Terms</div>
+                        <div class="pdf-section-content">
+                            <p>To receive payment, a signed copy of the Rate Confirmation and the company's invoice must be sent to the broker. We offer two options: a 2% fee for Quick Pay (same-day deposit) or no fees for a standard 24-hour deposit. Factoring is also available.</p>
+                            <p><strong>Selected Deposit Method:</strong> <span id="pdf-paymentOption" style="font-weight: bold;"></span></p>
+                        </div>
+                    </div>
+
+                    <!-- Term -->
+                    <div class="pdf-section">
+                        <div class="pdf-section-title">Term & Entire Contract</div>
+                        <div class="pdf-section-content">
+                            <p>The term of this Agreement shall be 90 days. If not cancelled, it shall automatically renew for consecutive one-year terms. Either Party may terminate with thirty (30) days written notice, provided all balances are settled. The provisions herein express the complete understanding between the parties. If the carrier wishes to end the contract or switch jobs, a 3-day prior notice is required.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Signature Section -->
+                    <div class="pdf-signature-section">
+                        <div class="pdf-signature-title">Signatures</div>
+                        <table class="pdf-signature-table">
+                            <tr>
+                                <td class="broker-header" colspan="2">BROKER: WIDE Range Logistics LLC.</td>
+                                <td class="carrier-header" colspan="2">CARRIER: <span id="pdf-sig-carrierName"></span></td>
+                            </tr>
+                            <tr>
+                                <td class="sig-label">Signature:</td>
+                                <td class="sig-value"><img src="assets/images/signatures.png" alt="Broker Signature" class="signature-image"></td>
+                                <td class="sig-label">Signature:</td>
+                                <td class="sig-value"><span id="pdf-signature"></span></td>
+                            </tr>
+                            <tr>
+                                <td class="sig-label">Print Name:</td>
+                                <td class="sig-value">John Smith</td>
+                                <td class="sig-label">Print Name:</td>
+                                <td class="sig-value" id="pdf-printName"></td>
+                            </tr>
+                            <tr>
+                                <td class="sig-label">Title:</td>
+                                <td class="sig-value">Logistics Manager</td>
+                                <td class="sig-label">Title:</td>
+                                <td class="sig-value" id="pdf-title"></td>
+                            </tr>
+                            <tr>
+                                <td class="sig-label">Date:</td>
+                                <td class="sig-value">May 21, 2023</td>
+                                <td class="sig-label">Date:</td>
+                                <td class="sig-value" id="pdf-date"></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- Certificate Section -->
+                    <div class="pdf-certificate-section">
+                        <div class="pdf-certificate-title">CERTIFICATE OF AUTHORITY</div>
+                        <div class="pdf-certificate-details">
+                            <div class="pdf-certificate-ids">
+                                <p><strong>MC:</strong> 741715</p>
+                                <p><strong>USDOT:</strong> 2248522</p>
+                            </div>
+                            <div class="pdf-certificate-address">
+                                <p><strong>WIDE Range Logistics LLC.</strong></p>
+                                <p>8340 HUNTING DRIVE</p>
+                                <p>NORTH ROYALTON, OH 44133</p>
+                            </div>
+                        </div>
+                        <div class="pdf-certificate-body">
+                            <p>This License is evidence of the applicant's authority to engage in operations, in interstate or foreign commerce, as a broker, arranging for the transportation of freight (except household goods) by Motor Vehicle.</p>
+                            <p>This authority will be effective as long as the broker maintains insurance coverage for the protection of the public (49 CFR 387) and the designation of agents upon whom process may be served (49 CFR 366). The applicant shall also make reasonably continuous and adequate service to the public.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 5: Done -->
+        <div class="form-container done-container" id="step5" style="display: none;">
+            <div class="done-header">
+                <h2>Agreement Generated Successfully!</h2>
+                <div class="decorative-line-center"></div>
+                <p class="form-subtitle">Your agreement has been submitted and is ready for download.</p>
+            </div>
+
+            <div class="pdf-preview">
+                <iframe id="pdfPreview" title="Agreement PDF Preview" width="100%" height="500px"></iframe>
+            </div>
+
+            <div class="done-content">
+                <div class="done-info-card">
+                    <h3><i class="fas fa-file-signature"></i>Agreement Summary</h3>
+                    <p><strong>Signed By:</strong> <span id="done-printName"></span> (<span id="done-title"></span>)</p>
+                    <p><strong>Signature:</strong> <span class="signature-value" id="done-signature"></span></p>
+                    <p><strong>Date Signed:</strong> <span id="done-date"></span></p>
+                    <p><strong>Email:</strong> <span id="done-email"></span></p>
+                    <p><strong>Deposit Method:</strong> <span class="payment-value" id="done-paymentOption"></span></p>
+                </div>
+                 <div class="done-info-card">
+                    <h3><i class="fas fa-truck"></i>Carrier Information</h3>
+                    <p><strong>Name:</strong> <span id="done-carrierName"></span></p>
+                    <p><strong>USDOT/MC#:</strong> <span id="done-carrierUSDOT"></span></p>
+                    <p><strong>Phone:</strong> <span id="done-carrierPhone"></span></p>
+                    <p><strong>Agreement Date:</strong> <span id="done-agreementDate"></span></p>
+                </div>
+            </div>
+
+            <div class="download-section">
+                <button id="downloadButton" class="download-button">
+                    <i class="fas fa-download"></i> Download Agreement
+                </button>
+                <button id="emailButton" class="download-button" style="background: linear-gradient(135deg, var(--accent), var(--primary)); margin-left: 15px; display: none;">
+                    <i class="fas fa-envelope"></i> Email to Northern Star
+                </button>
+                <div class="note" id="emailStatusNote">A copy of the signed agreement has been sent to your email (<strong id="done-email-note" style="margin: 0 5px;"></strong>). Please keep it for your records.</div>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="button-container">
+            <button id="backButton" class="back-button" style="display: none;">Back</button>
+            <button id="continueButton" class="continue-button">Continue</button>
+        </div>
+
+        <!-- Loading Overlay -->
+        <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+            <div class="spinner"></div>
+            <p id="loadingMessage">Generating and submitting your agreement...</p>
+            <div class="status-message" id="statusMessage" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Initialize jsPDF
+            window.jsPDF = window.jspdf.jsPDF;
+
+            // State management
+            const state = {
+                currentStep: 1,
+                carrierInfo: {
+                    carrierName: "",
+                    carrierUSDOT: "",
+                    carrierPhone: "",
+                    agreementDate: new Date().toISOString().split("T")[0],
+                    bankName: "",
+                    accountNumber: "",
+                    accountType: ""
+                }, 
+                agreementInfo: {
+                    printName: "",
+                    title: "",
+                    signature: "",
+                    date: new Date().toISOString().split("T")[0],
+                    email: "",
+                    paymentOption: "Zelle" // Default payment option
+                },
+                pdfUrl: "",
+                mailtoLink: "",
+                formErrors: {}
+            };
+
+            // Set initial dates
+            document.getElementById('agreementDate').value = state.carrierInfo.agreementDate;
+            document.getElementById('date').value = state.agreementInfo.date;
+
+            function clearFormFields() {
+                // Clear state object
+                state.carrierInfo = {
+                    carrierName: "", carrierUSDOT: "", carrierPhone: "",
+                    agreementDate: new Date().toISOString().split("T")[0],
+                    bankName: "", accountNumber: "", accountType: ""
+                };
+                state.agreementInfo = {
+                    printName: "", title: "", signature: "",
+                    date: new Date().toISOString().split("T")[0],
+                    email: "", paymentOption: "Zelle"
+                };
+                
+                // Reset form fields visually
+                document.getElementById("step1").querySelectorAll("input, select").forEach(el => {
+                    if (el.type !== 'date') el.value = '';
+                });
+                 document.getElementById("step3").querySelectorAll("input, select").forEach(el => {
+                    if (el.type !== 'date') el.value = '';
+                });
+                document.getElementById('agreementDate').value = state.carrierInfo.agreementDate;
+                document.getElementById('date').value = state.agreementInfo.date;
+            }
+
+            function validateForm() {
+                const errors = {};
+                const currentStepContainer = document.getElementById(`step${state.currentStep}`);
+                currentStepContainer.querySelectorAll("input[required], select[required]").forEach(input => {
+                    if (!input.value.trim()) {
+                        errors[input.name] = `${input.labels[0].textContent.replace(':', '')} is required.`;
+                    }
+                });
+
+                // Specific validations
+                if (state.currentStep === 1) {
+                    if (state.carrierInfo.carrierPhone.trim() && !/^[\d\s\-()+]+$/.test(state.carrierInfo.carrierPhone)) errors.carrierPhone = "Invalid phone number format.";
+                    if (state.carrierInfo.accountNumber.trim() && !/^\d+$/.test(state.carrierInfo.accountNumber)) errors.accountNumber = "Account number must contain only digits.";
+                } else if (state.currentStep === 3) {
+                    if (state.agreementInfo.email.trim() && !/^\S+@\S+\.\S+$/.test(state.agreementInfo.email)) errors.email = "Please enter a valid email address.";
+                }
+                
+                state.formErrors = errors;
+                displayFormErrors();
+                return Object.keys(errors).length === 0;
+            }
+
+            function displayFormErrors() {
+                // Clear all previous errors
+                document.querySelectorAll(".error-message").forEach(el => el.style.display = "none");
+                document.querySelectorAll(".form-field input, .form-field select").forEach(el => el.classList.remove("error"));
+
+                // Display new errors
+                for (const field in state.formErrors) {
+                    const errorElement = document.getElementById(`${field}Error`);
+                    const inputElement = document.getElementById(field);
+                    if (errorElement) {
+                        errorElement.textContent = state.formErrors[field];
+                        errorElement.style.display = "block";
+                    }
+                    if (inputElement) {
+                        inputElement.classList.add("error");
+                    }
+                }
+            }
+
+            function handleInputChange(e) {
+                const { name, value } = e.target;
+                const formState = state.currentStep === 1 ? state.carrierInfo : state.agreementInfo;
+                formState[name] = value;
+
+                if (state.formErrors[name]) {
+                    delete state.formErrors[name];
+                    const errorElement = document.getElementById(`${name}Error`);
+                    if (errorElement) errorElement.style.display = "none";
+                    e.target.classList.remove("error");
+                }
+            }
+
+            function handlePaymentOptionChange(option) {
+                state.agreementInfo.paymentOption = option;
+                document.querySelectorAll(".payment-option").forEach(el => el.classList.remove("selected"));
+                document.querySelector(`.payment-option[data-option="${option}"]`).classList.add("selected");
+                const radio = document.getElementById(option);
+                if (radio) radio.checked = true;
+            }
+
+            function showStep(step) {
+                state.currentStep = step;
+                document.querySelectorAll("[id^='step']").forEach(el => el.style.display = "none");
+                document.getElementById(`step${step}`).style.display = "block";
+
+                document.querySelectorAll(".step").forEach(el => {
+                    el.classList.remove("active", "completed");
+                    const stepNumber = parseInt(el.dataset.step);
+                    if (stepNumber < step) el.classList.add("completed");
+                    if (stepNumber === step) el.classList.add("active");
+                });
+
+                const backButton = document.getElementById("backButton");
+                const continueButton = document.getElementById("continueButton");
+                backButton.style.display = step > 1 && step < 5 ? "block" : "none";
+                continueButton.style.display = step < 5 ? "block" : "none";
+
+                if (step === 4) continueButton.textContent = "Generate & Submit Agreement";
+                else continueButton.textContent = "Continue";
+                
+                if (step === 4) populatePdfFields();
+                
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            function handleNext() {
+                if (validateForm()) {
+                    if (state.currentStep === 4) {
+                        generatePDF();
+                    } else {
+                        showStep(state.currentStep + 1);
+                    }
+                }
+            }
+
+            function populatePdfFields() {
+                const { carrierInfo, agreementInfo } = state;
+                
+                // Desktop elements
+                if (document.getElementById("pdf-carrierName")) {
+                    document.getElementById("pdf-carrierName").textContent = carrierInfo.carrierName || " ";
+                    document.getElementById("pdf-carrierUSDOT").textContent = carrierInfo.carrierUSDOT || " ";
+                    document.getElementById("pdf-carrierPhone").textContent = carrierInfo.carrierPhone || " ";
+                    document.getElementById("pdf-agreementDate").textContent = carrierInfo.agreementDate || " ";
+                    document.getElementById("pdf-bankName").textContent = carrierInfo.bankName || " ";
+                    document.getElementById("pdf-accountNumber").textContent = carrierInfo.accountNumber || " ";
+                    document.getElementById("pdf-accountType").textContent = carrierInfo.accountType || " ";
+                }
+                
+                // Mobile elements
+                if (document.getElementById("pdf-mobile-carrierName")) {
+                    document.getElementById("pdf-mobile-carrierName").textContent = carrierInfo.carrierName || " ";
+                    document.getElementById("pdf-mobile-carrierUSDOT").textContent = carrierInfo.carrierUSDOT || " ";
+                    document.getElementById("pdf-mobile-carrierPhone").textContent = carrierInfo.carrierPhone || " ";
+                    document.getElementById("pdf-mobile-agreementDate").textContent = carrierInfo.agreementDate || " ";
+                    document.getElementById("pdf-mobile-bankName").textContent = carrierInfo.bankName || " ";
+                    document.getElementById("pdf-mobile-accountNumber").textContent = carrierInfo.accountNumber || " ";
+                    document.getElementById("pdf-mobile-accountType").textContent = carrierInfo.accountType || " ";
+                }
+                
+                // Common elements
+                if (document.getElementById("pdf-intro-carrierName")) {
+                    document.getElementById("pdf-intro-carrierName").textContent = carrierInfo.carrierName || " ";
+                    document.getElementById("pdf-intro-agreementDate").textContent = carrierInfo.agreementDate || " ";
+                    document.getElementById("pdf-paymentOption").textContent = agreementInfo.paymentOption || "Zelle";
+                    document.getElementById("pdf-sig-carrierName").textContent = carrierInfo.carrierName || " ";
+                    document.getElementById("pdf-signature").textContent = agreementInfo.signature || " ";
+                    document.getElementById("pdf-printName").textContent = agreementInfo.printName || " ";
+                    document.getElementById("pdf-title").textContent = agreementInfo.title || " ";
+                    document.getElementById("pdf-date").textContent = agreementInfo.date || " ";
+                }
+            }
+
+            function populateDoneFields() {
+                const { carrierInfo, agreementInfo } = state;
+                document.getElementById("done-carrierName").textContent = carrierInfo.carrierName;
+                document.getElementById("done-carrierUSDOT").textContent = carrierInfo.carrierUSDOT;
+                document.getElementById("done-carrierPhone").textContent = carrierInfo.carrierPhone;
+                document.getElementById("done-agreementDate").textContent = carrierInfo.agreementDate;
+                document.getElementById("done-printName").textContent = agreementInfo.printName;
+                document.getElementById("done-title").textContent = agreementInfo.title;
+                document.getElementById("done-signature").textContent = agreementInfo.signature;
+                document.getElementById("done-date").textContent = agreementInfo.date;
+                document.getElementById("done-email").textContent = agreementInfo.email;
+                document.getElementById("done-email-note").textContent = agreementInfo.email;
+                document.getElementById("done-paymentOption").textContent = agreementInfo.paymentOption;
+                if (state.pdfUrl) document.getElementById("pdfPreview").src = state.pdfUrl;
+                
+                // Show email button if automatic email failed
+                const emailButton = document.getElementById("emailButton");
+                const emailStatusNote = document.getElementById("emailStatusNote");
+                if (state.mailtoLink) {
+                    emailButton.style.display = "inline-flex";
+                    emailStatusNote.innerHTML = `Automatic email failed. Please click "Email to Northern Star" or manually send the PDF to <strong>dispatch@northernstarlogistics.com</strong>`;
+                } else {
+                    emailStatusNote.innerHTML = `A copy of the signed agreement has been sent to your email (<strong id="done-email-note2">${agreementInfo.email}</strong>). Please keep it for your records.`;
+                }
+            }
+
+            async function generatePDF() {
+                document.getElementById("loadingOverlay").style.display = "flex";
+                updateLoadingStatus("Generating PDF document...");
+                
+                await new Promise(resolve => setTimeout(resolve, 100)); // Ensure overlay renders
+
+                try {
+                    const content = document.getElementById("agreementDoc");
+                    const canvas = await html2canvas(content, { scale: 2, useCORS: true, logging: false });
+                    
+                    updateLoadingStatus("Creating PDF file...");
+                    
+                    const pdf = new jsPDF("p", "mm", "a4");
+                    const pdfWidth = pdf.internal.pageSize.getWidth();
+                    const pdfHeight = pdf.internal.pageSize.getHeight();
+                    const canvasWidth = canvas.width;
+                    const canvasHeight = canvas.height;
+                    const ratio = canvasHeight / canvasWidth;
+                    const imgHeight = pdfWidth * ratio;
+                    let heightLeft = imgHeight;
+                    let position = 0;
+
+                    pdf.addImage(canvas.toDataURL('image/jpeg', 1.0), 'JPEG', 0, position, pdfWidth, imgHeight);
+                    heightLeft -= pdfHeight;
+
+                    while (heightLeft >= 0) {
+                        position = heightLeft - imgHeight;
+                        pdf.addPage();
+                        pdf.addImage(canvas.toDataURL('image/jpeg', 1.0), 'JPEG', 0, position, pdfWidth, imgHeight);
+                        heightLeft -= pdfHeight;
+                    }
+                    
+                    const pdfOutput = pdf.output('blob');
+                    state.pdfUrl = URL.createObjectURL(pdfOutput);
+
+                    updateLoadingStatus("Sending ...");
+                    await sendPdfToBackend(pdfOutput);
+
+                    updateLoadingStatus("Finalizing agreement...");
+                    populateDoneFields();
+                    showStep(5);
+                    clearFormFields();
+                } catch (error) {
+                    console.error("Error generating PDF:", error);
+                    updateLoadingStatus("Failed to generate PDF. Please try again.", 'error');
+                    setTimeout(() => {
+                        document.getElementById("loadingOverlay").style.display = "none";
+                    }, 3000);
+                    return;
+                } finally {
+                    setTimeout(() => {
+                        document.getElementById("loadingOverlay").style.display = "none";
+                    }, 1000);
+                }
+            }
+
+            async function sendPdfToBackend(pdfBlob) {
+                const apiUrl = 'https://nothern-star-logistic-inc-backend.vercel.app/api/email/send-with-attachments';
+                
+                // Create FormData with the expected field names for the backend
+                const formData = new FormData();
+                formData.append('file', pdfBlob, 'Northern_Star_Logistics_Agreement.html');
+                formData.append('to', state.agreementInfo.email);
+                formData.append('subject', 'Northern Star Logistics - Broker/Carrier Agreement');
+                formData.append('carrierName', state.carrierInfo.carrierName || '');
+                formData.append('carrierUSDOT', state.carrierInfo.carrierUSDOT || '');
+                formData.append('carrierPhone', state.carrierInfo.carrierPhone || '');
+                formData.append('agreementDate', state.carrierInfo.agreementDate || '');
+                formData.append('paymentMethod', state.agreementInfo.paymentOption || 'Zelle');
+                formData.append('printName', state.agreementInfo.printName || '');
+                formData.append('title', state.agreementInfo.title || '');
+                
+                // Create email body with carrier information
+                const emailBody = `
+Dear Northern Star Logistics Team,
+
+A new Broker/Carrier Agreement has been completed and signed:
+
+CARRIER INFORMATION:
+- Company Name: ${state.carrierInfo.carrierName}
+- USDOT/MC Number: ${state.carrierInfo.carrierUSDOT}
+- Phone Number: ${state.carrierInfo.carrierPhone}
+- Email: ${state.agreementInfo.email}
+
+AGREEMENT DETAILS:
+- Agreement Date: ${state.carrierInfo.agreementDate}
+- Signed By: ${state.agreementInfo.printName} (${state.agreementInfo.title})
+- Signature Date: ${state.agreementInfo.date}
+- Selected Payment Method: ${state.agreementInfo.paymentOption}
+
+The completed and signed agreement is attached to this email.
+
+Best regards,
+Northern Star Logistics System
+                `.trim();
+
+                formData.append('text', emailBody);
+
+                updateLoadingStatus('Sending agreement to Northern Star Logistics team...');
+
+                try {
+                    const response = await fetch(apiUrl, { 
+                        method: 'POST', 
+                        body: formData,
+                        mode: 'cors'
+                    });
+                    
+                    if (!response.ok) {
+                        const errorText = await response.text();
+                        console.error('API Error Response:', errorText);
+                        throw new Error(`HTTP ${response.status}: ${response.statusText} - ${errorText}`);
+                    }
+                    
+                    const result = await response.json();
+                    console.log('PDF sent successfully:', result);
+                    updateLoadingStatus('Agreement sent successfully to your email!', 'success');
+                    setTimeout(() => {
+                        updateLoadingStatus('Completing process...', 'success');
+                    }, 1500);
+                    
+                } catch (error) {
+                    console.error('Failed to send PDF to backend:', error);
+                    
+                    // Try no-cors as fallback for CORS issues
+                    if (error.message.includes('CORS') || error.message.includes('cors')) {
+                        try {
+                            updateLoadingStatus('Trying alternative method...');
+                            await fetch(apiUrl, { 
+                                method: 'POST', 
+                                body: formData,
+                                mode: 'no-cors'
+                            });
+                            
+                            console.log('PDF sent using no-cors mode (success assumed)');
+                            updateLoadingStatus('Agreement sent successfully!', 'success');
+                            setTimeout(() => {
+                                updateLoadingStatus('Completing process...', 'success');
+                            }, 1500);
+                            return;
+                            
+                        } catch (noCorsError) {
+                            console.warn('No-cors fallback also failed:', noCorsError.message);
+                        }
+                    }
+                    
+                    // Show error message but don't block the flow
+                    updateLoadingStatus('Unable to send email automatically. You can download the PDF below and send it manually.', 'warning');
+                    setTimeout(() => {
+                        updateLoadingStatus('Completing process...', 'warning');
+                    }, 2500);
+                    
+                    // Try alternative method
+                    await tryAlternativeEmailMethod(pdfBlob);
+                }
+            }
+
+            async function tryAlternativeEmailMethod(pdfBlob) {
+                // Alternative email service or method
+                try {
+                    console.log('Attempting alternative email method...');
+                    
+                    // Create a mailto link as a fallback
+                    const emailSubject = encodeURIComponent('Northern Star Logistics - Broker/Carrier Agreement');
+                    const emailBody = encodeURIComponent(`
+Dear Northern Star Logistics Team,
+
+Please find attached the completed Broker/Carrier Agreement for:
+
+Carrier Name: ${state.carrierInfo.carrierName}
+USDOT/MC: ${state.carrierInfo.carrierUSDOT}
+Phone: ${state.carrierInfo.carrierPhone}
+Agreement Date: ${state.carrierInfo.agreementDate}
+Payment Method: ${state.agreementInfo.paymentOption}
+Contact Email: ${state.agreementInfo.email}
+
+The signed agreement PDF is attached to this email.
+
+Best regards,
+${state.agreementInfo.printName}
+${state.agreementInfo.title}
+${state.carrierInfo.carrierName}
+                    `);
+                    
+                    // Store the mailto link for later use
+                    state.mailtoLink = `mailto:dispatch@northernstarlogistics.com?subject=${emailSubject}&body=${emailBody}`;
+                    
+                    // You could also implement EmailJS here if you have an account
+                    // Example EmailJS implementation:
+                    /*
+                    if (typeof emailjs !== 'undefined') {
+                        await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+                            to_email: 'dispatch@northernstarlogistics.com',
+                            carrier_name: state.carrierInfo.carrierName,
+                            carrier_email: state.agreementInfo.email,
+                            carrier_phone: state.carrierInfo.carrierPhone,
+                            carrier_usdot: state.carrierInfo.carrierUSDOT,
+                            agreement_date: state.carrierInfo.agreementDate,
+                            payment_method: state.agreementInfo.paymentOption,
+                            message: emailBody
+                        });
+                        console.log('Alternative email sent via EmailJS');
+                    }
+                    */
+                    
+                } catch (altError) {
+                    console.warn('Alternative email method also failed:', altError.message);
+                }
+            }
+
+            function updateLoadingStatus(message, type = 'normal') {
+                const loadingMessage = document.getElementById('loadingMessage');
+                const statusMessage = document.getElementById('statusMessage');
+                
+                if (loadingMessage) {
+                    loadingMessage.textContent = message;
+                    loadingMessage.className = type === 'success' ? 'status-success' : 
+                                              type === 'error' ? 'status-error' : 
+                                              type === 'warning' ? 'status-warning' : '';
+                }
+                
+                if (type !== 'normal' && statusMessage) {
+                    statusMessage.style.display = 'block';
+                    statusMessage.textContent = type === 'success' ? '✓ Success' : 
+                                               type === 'error' ? '✗ Error' : 
+                                               type === 'warning' ? '⚠ Warning' : '';
+                    statusMessage.className = `status-message status-${type}`;
+                } else if (statusMessage) {
+                    statusMessage.style.display = 'none';
+                }
+            }
+
+            function downloadPdf() {
+                if (state.pdfUrl) {
+                    const link = document.createElement('a');
+                    link.href = state.pdfUrl;
+                    link.download = 'Northern_Star_Logistics_Agreement.html';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+            }
+
+            // Event Listeners
+            document.querySelectorAll("#step1 input, #step1 select, #step3 input, #step3 select").forEach(el => {
+                el.addEventListener("input", handleInputChange);
+            });
+            document.querySelectorAll(".payment-option").forEach(el => {
+                el.addEventListener("click", () => handlePaymentOptionChange(el.dataset.option));
+            });
+            document.getElementById("continueButton").addEventListener("click", handleNext);
+            document.getElementById("backButton").addEventListener("click", () => showStep(state.currentStep - 1));
+            document.getElementById("downloadButton").addEventListener("click", downloadPdf);
+            document.getElementById("emailButton").addEventListener("click", () => {
+                if (state.mailtoLink) {
+                    window.open(state.mailtoLink, '_blank');
+                }
+            });
+
+            // Initial setup
+            showStep(1);
+        });
+    </script>
+</body>
+
+<!-- Mirrored from northernstarlogisticinc.com/agreement.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Oct 2025 04:43:28 GMT -->
+</html>

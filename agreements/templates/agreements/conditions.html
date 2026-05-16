@@ -1,0 +1,80 @@
+{% extends "agreements/base.html" %}
+{% block title %}Conditions{% endblock %}
+{% block content %}
+
+<div class="stepper-wrapper">
+  <div class="stepper-item active"><div class="step-counter">1</div><small>Carrier Info</small></div>
+  <div class="stepper-item active"><div class="step-counter">2</div><small>Conditions</small></div>
+  <div class="stepper-item"><div class="step-counter">3</div><small>Sign Agreement</small></div>
+  <div class="stepper-item"><div class="step-counter">4</div><small>Preview</small></div>
+  <div class="stepper-item"><div class="step-counter">5</div><small>Done</small></div>
+</div>
+
+<div class="agreement-card">
+  <h3 class="text-center mb-2 fw-bold">Terms & Conditions</h3>
+
+  <div class="p-3 border rounded mb-3" style="max-height:360px; overflow:auto; white-space:pre-wrap;">
+    <h5><b>BROKER OBLIGATIONS</b></h5><hr>
+    Broker shall pay CARRIER for services rendered in an amount equal to the rates and charges agreed to as set forth on any Load Confirmation(s) that is issued and that supplements and amends this Agreement to the extent its terms conflict with those in this Agreement. This Agreement or the Load Confirmation also governs all accessorial services which may be required or performed. CARRIER shall not bill for any accessorial or other charge not approved in this Agreement or in any Load Confirmation(s). Rates may be amended orally but must be confirmed in writing within five working days of the modification in order to remain binding between the parties. As a condition precedent to payment.
+
+    <h5><b>CARRIER OBLIGATIONS</b></h5><hr>
+    CARRIER must submit proof of delivery with its invoices, and the invoices must reflect that CARRIER delivered the freight to its final destination. a. BROKER agrees to arrange for the transportation of a shipper's freight with CARRIER pursuant to the terms of this Agreement, and to comply with all federal, state, and local laws and regulations pertaining to the brokerage services covered by this Agreement.
+
+    The Parties agree that BROKER'S responsibilities under this Agreement are limited to arranging for the transportation of a shipper's freight with CARRIER, and not actually performing the transportation.
+
+    <h5><b>SLOT FEE (REFUNDABLE)</b></h5><hr>
+    The Carrier shall make a security deposit of $399 by direct payment, through instant payment methods to WIDE Range Logistics LLC. It is a refundable fee upon the first delivery, along with the payment of the load, for the securement of the load. Once carrier pays $399, carrier must get a Receipt for the Deposit Fee by the representative. The security deposit shall be refundable upon the termination of this Agreement, subject to any outstanding obligations or damages incurred by the Carrier. The Carrier may terminate this Agreement with one week's written notice to the Company. Broker is responsible for Detention.
+
+    <h5><b>Accessorials/Incidentals:</b></h5><hr>
+    To be eligible, Carrier must be checked in to shipper/receiver by the appointment time and submit all proof of detention, accessorials, and incidentals within 24-48 hours of delivery. Detention accrual begins 2 hours after appointment time if Broker is notified after 60 minutes of waiting. Provide time stamped BOL within 48 hours of delivery. Detention Rate: $40/hr after 2 hours (Max $200 per stop). Layover: $250. TONU: $200.
+
+    <h5><b>PAYMENT TERMS</b></h5><hr>
+    Signed Copy of Rate Confirmation and the company's Invoice must be sent to the broker to get paid. We have two options: 2% fee for Quick Pay (same-day deposit) or no fees for a standard 24-hour deposit. Factoring is also an option.
+
+    <h5><b>TERM</b></h5><hr>
+    The term of this Agreement shall be 90 days, commencing on the date listed above. If not cancelled by one of The Parties, the Agreement shall automatically renew itself for consecutive one-year terms. The Agreement can be terminated at any time by either Party with thirty (30) days written or electronic notice to the other party, provided all balances are settled.
+
+    <h5><b>ENTIRE CONTRACT & NOTICES</b></h5><hr>
+    The provisions contained in this AGREEMENT properly express and memorialize the complete understanding and agreement between the parties. If the carrier wants to end the contract or switch jobs, the carrier must give prior notice of 3 days before ending the contract.
+  </div>
+
+  <form method="post">
+    {% csrf_token %}
+    <div class="form-check mb-3">
+      {{ form.accepted_terms }} {{ form.accepted_terms.label_tag }}
+    </div>
+    <div class="d-flex gap-2">
+      <a href="{% url 'agreements:carrier_info' %}" class="btn btn-outline-secondary">Back</a>
+      <button class="btn btn-primary ms-auto">Accept & Continue →</button>
+    </div>
+  </form>
+</div>
+
+<style>
+  /* Updated theme: solid/gradient #114476 */
+  .btn-primary {
+    background: linear-gradient(90deg, #114476, #165b99);
+    border: none;
+  }
+  .btn-primary:hover {
+    background: linear-gradient(90deg, #0d3763, #114476);
+  }
+
+  .stepper-item.active .step-counter {
+    background: linear-gradient(135deg, #114476, #165b99);
+  }
+  .stepper-item.active::after {
+    background: linear-gradient(90deg, #114476, #165b99);
+  }
+
+  .agreement-card {
+    animation: fadeUp 0.8s ease;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+{% endblock %}

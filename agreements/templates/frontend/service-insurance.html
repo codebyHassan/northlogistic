@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from northernstarlogisticinc.com/service-insurance.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Oct 2025 04:43:29 GMT -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insurance Application Assistance — $399 Same‑Day Service</title>
+  <meta name="robots" content="index,follow,noarchive" />
+  <meta name="googlebot" content="noarchive" />
+  <link rel="stylesheet" href="{% static 'frontend/css/styles.css' %}" />
+  <link rel="stylesheet" href="{% static 'frontend/css/service-insurance.css' %}" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/webp" href="{% static 'frontend/images/logo.jpg' %}" />
+  <link rel="apple-touch-icon" href="{% static 'frontend/images/logo.jpg' %}" />
+</head>
+
+<body>
+ {% include 'frontend/header.html' %}
+ <br><br><br>
+  <!-- Hero -->
+  <section class="service-hero" style="background-image:url('{% static 'frontend/images/landing%201.jpg' %}');">
+    <div class="container">
+      <h1>We Help You Apply for the Right Commercial Trucking Insurance — Fast.</h1>
+      <p>Whether you’re a new owner‑operator or an experienced carrier, commercial insurance is a legal requirement and
+        one of the first steps to start hauling loads. We’ll help you submit the right way — with speed, accuracy, and
+        trusted partners.</p>
+    </div>
+  </section>
+
+  <section class="service-section">
+    <div class="container service-content">
+      <article class="service-block">
+        <h2>Why Truck Insurance Matters:</h2>
+        <ul class="check-list">
+          <li>- Required by FMCSA to activate your authority</li>
+          <li>- Mandatory to haul freight under most brokers and shippers</li>
+          <li>- Often required by ports and local work with warehouses</li>
+          <li>- Protects your driver, business reputation, and financial security</li>
+        </ul>
+      </article>
+
+      <article class="service-block">
+        <h2>What We Offer for $399:</h2>
+        <ul class="dash-list">
+          <li>One‑day insurance application assistance — we guide everything needed to get covered fast</li>
+          <li>Help choosing the right coverage for your business and authority</li>
+          <li>Work with insurance agents who understand trucking and commercial needs</li>
+          <li>Guidance on common legal requirements (certs, filings, cargo and liability)</li>
+          <li>Preparation tips to ensure approval and better pricing</li>
+        </ul>
+      </article>
+
+      <article class="service-block">
+        <h2>Types of Insurance We Help You With:</h2>
+        <ul class="dash-list">
+          <li>Primary Auto Liability — required to activate your DOT authority</li>
+          <li>Cargo Insurance — covers goods in transit</li>
+          <li>General Liability — covers your business’s general risks</li>
+          <li>Non‑Trucking Liability (Bobtail) — when driving without a load</li>
+          <li>Physical Damage — protection for your tractor or trailer</li>
+        </ul>
+      </article>
+
+      <article class="service-block">
+        <h2>Who Is This Service For?</h2>
+        <ul class="dash-list">
+          <li>New Authority / First‑Time Owner‑Operators</li>
+          <li>Lease‑on drivers switching into their own business</li>
+          <li>Fleet owners who are expanding or renewing policies</li>
+          <li>Anyone needing the right coverage to access better lanes</li>
+        </ul>
+      </article>
+
+      <article class="service-block">
+        <h2>What You’ll Need:</h2>
+        <ul class="dash-list">
+          <li>Your CDL and business information</li>
+          <li>Basic details about your truck/trailer (help provided)</li>
+          <li>DOT and MC numbers (or we’ll help if not started)</li>
+          <li>Preferred lane needs and driving history</li>
+        </ul>
+      </article>
+
+      <article class="service-block">
+        <h2>We Know What Insurers Look For</h2>
+        <p class="muted">We package your application to be accurate, professional, and optimized for approval. We help
+          you avoid rejections and delays that could cost your loads.</p>
+      </article>
+
+      <article class="service-block">
+        <h2>Let’s Get You Covered — Today</h2>
+        <p class="muted">Apply once — and we’ll handle the rest. Focus on driving while we get you insured and legally
+          road‑ready.</p>
+        <a class="cta-button" href="{% url 'agreements:contact' %}">Insurance Now <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg></span></a>
+      </article>
+    </div>
+  </section>
+
+  {% include "frontend/footer.html" %}
+  <script src="{% static 'frontend/js/script.js' %}" defer></script>
+  <script src="{% static 'frontend/js/service-rented-trailer.js' %}"></script>
+</body>
+
+
+<!-- Mirrored from northernstarlogisticinc.com/service-insurance.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Oct 2025 04:43:30 GMT -->
+</html>
